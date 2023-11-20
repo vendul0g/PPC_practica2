@@ -5,6 +5,7 @@ import java.net.*;
 import java.util.Random;
 
 import addressCalculator.AddressCalculator;
+import serializacion.XMLParser;
 import threadsServidor.*;
 
 public abstract class Servidor {
@@ -20,17 +21,20 @@ public abstract class Servidor {
 	private SenderThread sender;
 	private ControlThreadServer controller;
 	private InetAddress broadcastAddr;
+	protected XMLParser xmlParser;
 	
 	//Constructor
-	public Servidor(int port) {
+	public Servidor(int id, int port) {
 		createSocket(port);
+		broadcastAddr = AddressCalculator.getBroadcastAddress();
+		
 		this.sender = new SenderThread(this, getSocket());
 		this.controller = new ControlThreadServer(this, getSocket());
 		
 		this.timeRefresh = DEFAULT_REFRESH;
 		this.r = new Random();
 		
-		broadcastAddr = AddressCalculator.getWloAddress();
+		this.xmlParser = new XMLParser();
 	}
 	
 	//Getters & Setters
@@ -52,7 +56,10 @@ public abstract class Servidor {
 	
 	public void setTimeRefresh(int n) {
 		this.timeRefresh = n;
-		System.out.println(timeRefresh);
+	}
+	
+	public InetAddress getSendAddr() {
+		return this.broadcastAddr;
 	}
 	
 	public abstract String getParameters();

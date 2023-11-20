@@ -5,10 +5,10 @@ import messages.BroadcastMessage;
 public class ServidorCalidadAire extends Servidor{
 	//Constantes
 	public static final int CONTROL_PORT = 2002;
-	public static final String ID = "ServidorCalidadAire";
-	public static final String CON_CO2 = "ConcentracionCO2=";
-	public static final String CON_O3 = "ConcentracionO3=";
-	public static final String CON_PART_SUSP = "ConcentracionParticulasSuspension=";
+	public static final int ID = 2;
+	public static final String CON_CO2 = "ConcentracionCO2";
+	public static final String CON_O3 = "ConcentracionO3";
+	public static final String CON_PART_SUSP = "ConcentracionParticulasSuspension";
 	
 	//Atributos
 	private int conCO2; //[350,450] ppm
@@ -18,8 +18,7 @@ public class ServidorCalidadAire extends Servidor{
 	
 	//Constructor
 	public ServidorCalidadAire() {
-		super(CONTROL_PORT);
-		this.id = ID;
+		super(ID, CONTROL_PORT);
 	}
 	
 	//Getters & Setters
@@ -39,13 +38,11 @@ public class ServidorCalidadAire extends Servidor{
 	}
 	
 	public String getParameters() {
-		BroadcastMessage msg = new BroadcastMessage();
-		msg.setId(ID);
-		msg.setParam1(CON_CO2+"="+getConCO2());
-		msg.setParam2(CON_O3+"="+getConO3());
-		msg.setParam3(CON_PART_SUSP+"="+getConPartSusp());
-		
-		return msg.getMessage();
+		return this.xmlParser.serializeBroadcastMessage(String.valueOf(ID),
+				CON_CO2, String.valueOf(getConCO2()),
+				CON_O3, String.valueOf(getConO3()),
+				CON_PART_SUSP, String.valueOf(getConPartSusp()));
+				
 	}
 	
 	public String getID() {

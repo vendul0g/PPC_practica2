@@ -5,9 +5,9 @@ import messages.BroadcastMessage;
 public class ServidorClima extends Servidor{
 	//Constantes
 	public static final int CONTROL_PORT = 2001;
-	public static final String ID = "ServidorClima";
-	public static final String PRES_ATMOS = "PresionAtmosferica=";
-	public static final String TEMP = "Temperatura=";
+	public static final int ID = 1;
+	public static final String PRES_ATMOS = "PresionAtmosferica";
+	public static final String TEMP = "Temperatura";
 	public static final String HUMEDAD = "Humedad";
 	
 	//Atributos
@@ -17,8 +17,7 @@ public class ServidorClima extends Servidor{
 	
 	//Constructor
 	public ServidorClima() {
-		super(CONTROL_PORT);
-		this.id = ID;
+		super(ID, CONTROL_PORT);
 	}
 
 	//Getters & Setters
@@ -39,13 +38,10 @@ public class ServidorClima extends Servidor{
 	}
 	
 	public String getParameters() {
-		BroadcastMessage msg = new BroadcastMessage();
-		msg.setId(ID);
-		msg.setParam1(PRES_ATMOS+"="+getPresionAtmosferica());
-		msg.setParam2(TEMP+"="+getTemperatura());
-		msg.setParam3(HUMEDAD+"="+getHumedad());
-		
-		return msg.getMessage();
+		return new BroadcastMessage(ID, 
+				PRES_ATMOS, String.valueOf(getPresionAtmosferica()), 
+				TEMP, String.valueOf(getTemperatura()), 
+				HUMEDAD, String.valueOf(getHumedad())).serialize();
 	}
 	
 	public String getID() {

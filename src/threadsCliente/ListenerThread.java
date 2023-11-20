@@ -2,17 +2,21 @@ package threadsCliente;
 
 import java.net.*;
 
+import cliente.Cliente;
 import estadistico.Estadistico;
+import messages.BroadcastMessage;
 
 import java.io.*;
 
 public class ListenerThread extends Thread{
 	//Atributos
+	private Cliente creator;
 	private DatagramSocket s;
 	private Estadistico e;
 	
 	//Constructor
-	public ListenerThread(DatagramSocket s, Estadistico e) {
+	public ListenerThread(Cliente c, DatagramSocket s, Estadistico e) {
+		this.creator = c;
 		this.s = s;
 		this.e = e;
 	}
@@ -29,8 +33,15 @@ public class ListenerThread extends Thread{
 			//Recibimos el mensaje
 			msg = recieveMessage(packet, buf);
 			
+			//Anotamos el puerto de envío
+			creator.addServer(packet.getPort());
+			
 			//Mandamos a procesar el mensaje TODO al estadístico
-			e.addEntradas(msg);
+			BroadcastMessage bm = new BroadcastMessage().deserialize(msg);
+			if(bm != null) {
+				System.out.println(bm.toString());
+				e.addEntradas(msg);
+			}
 		}
 	}
 	

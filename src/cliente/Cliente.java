@@ -2,6 +2,11 @@ package cliente;
 
 import java.io.*;
 import java.net.*;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
 
 import estadistico.Estadistico;
 import servidores.Servidor;
@@ -14,6 +19,7 @@ public class Cliente {
 	private DatagramSocket socketControl;
 	private InetAddress address;
 	private Estadistico e;
+	private List<Integer> portServerMapper;
 	
 	//Constructor
 	public Cliente() {
@@ -22,7 +28,31 @@ public class Cliente {
 		crearSocketListener();
 		crearSocketControl();
 		e = new Estadistico();
+		this.portServerMapper = new LinkedList<Integer>(); 
 	}
+	
+	//Getters & Setters
+	public void addServer(int port) {
+		if(portServerMapper.contains(port))
+			return;
+		portServerMapper.add(port);
+	}
+	
+	public boolean isServerPort(int port) {
+	    return this.portServerMapper.contains(Integer.valueOf(port));
+	}
+
+	
+	public String getServersRunning() {
+	    if(portServerMapper.isEmpty()) 
+	    	return null;
+	    String s = portServerMapper.get(0).toString();
+	    for(int i = 1; i < portServerMapper.size(); i++) {
+	    	s += ", "+portServerMapper.get(i).toString();
+	    }
+	    return s;
+	}
+
 	
 	//Funcionalidad
 	public void setAddress() {
@@ -36,8 +66,8 @@ public class Cliente {
 	
 	public void run() {
 		//Creamos los hilos
-		ListenerThread l = new ListenerThread(socketListener, e);
-		ControlThreadClient c = new ControlThreadClient(socketControl, address);
+		ListenerThread l = new ListenerThread(this, socketListener, e);
+		ControlThreadClient c = new ControlThreadClient(this, socketControl, address);
 		
 		//Invocamos el hilo de recepción de mensajes broadcast
 		l.start();

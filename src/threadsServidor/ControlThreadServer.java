@@ -39,9 +39,9 @@ public class ControlThreadServer extends Thread{
 			proccesMesage(ControlMessageType.getType(msg));
 			
 			//Devolvemos un ACK
-			buf = new ControlMessage(ControlMessageType.ACK).getBytes();
-			packet = new DatagramPacket(buf, buf.length, addr, port);
-			sendMessage(packet);
+//			buf = new ControlMessage(ControlMessageType.ACK).getBytes();
+//			packet = new DatagramPacket(buf, buf.length, addr, port);
+//			sendMessage(packet);
 		}
 	}
 	

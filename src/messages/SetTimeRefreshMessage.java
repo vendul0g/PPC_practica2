@@ -5,8 +5,13 @@ public class SetTimeRefreshMessage extends ControlMessage{
 	private int time;
 	
 	//Constructor
-	public SetTimeRefreshMessage(ControlMessageType c, int time, int port) {
+	public SetTimeRefreshMessage(ControlMessageType c, int port, int time) {
 		super(c, port);
+		this.time = time;
+	}
+	
+	public SetTimeRefreshMessage(ControlMessageType c, int time) {
+		super(c);
 		this.time = time;
 	}
 	
@@ -17,6 +22,6 @@ public class SetTimeRefreshMessage extends ControlMessage{
 	
 	//Funcionalidad
 	public String toString() {
-		return getCommandString()+"_"+time;
+		return getCommandString()+" "+getDstPort()+" "+time;
 	}
 }

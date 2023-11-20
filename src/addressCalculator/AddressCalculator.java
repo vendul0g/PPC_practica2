@@ -1,42 +1,27 @@
 package addressCalculator;
 
-import java.net.DatagramSocket;
-import java.net.InetAddress;
-import java.net.NetworkInterface;
-import java.net.SocketException;
-import java.net.UnknownHostException;
-import java.util.Enumeration;
+import java.net.*;
 
 public class AddressCalculator {
-	public AddressCalculator() {
+	private static final String INTERFACE = "wlo1";
 		
-	}
-	
-	public static InetAddress getWloAddress() {
-		String interfaceName = "wlo1"; // Replace with your specific interface name
-
-        try {
-            NetworkInterface networkInterface = NetworkInterface.getByName(interfaceName);
-            Enumeration<InetAddress> addresses = networkInterface.getInetAddresses();
-
-            while (addresses.hasMoreElements()) {
-                InetAddress address = addresses.nextElement();
-                return toBroadcast(address);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
-	}
-	
-	private static InetAddress toBroadcast(InetAddress address) {
-		byte[] aux = address.getAddress();
-		System.out.println(aux[3]);
+    public static InetAddress getBroadcastAddress() {
+        NetworkInterface networkInterface;
 		try {
-			return InetAddress.getByAddress(aux);
-		} catch (UnknownHostException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			networkInterface = NetworkInterface.getByName(INTERFACE);
+		} catch (SocketException e) {
+			System.err.println("Interfaz "+INTERFACE+" no existe");
+			return null;
 		}
-	}
+
+        for (InterfaceAddress interfaceAddress : networkInterface.getInterfaceAddresses()) {
+            InetAddress broadcast = interfaceAddress.getBroadcast();
+            if (broadcast != null) {
+                return broadcast;
+            }
+        }
+
+        System.err.println("Interface "+INTERFACE+" not found");
+        return null;
+    }
 }

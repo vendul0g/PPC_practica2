@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
 
+import cliente.Cliente;
 import messages.*;
 import servidores.ServidorCalidadAire;
 import servidores.ServidorClima;
@@ -14,13 +15,15 @@ import java.io.*;
 
 public class ControlThreadClient extends Thread{
 	//Atributos
+	private Cliente creator;
 	private DatagramSocket socket;
 	private InetAddress dst;
 	private Scanner scanner;
 	private Map<Integer, Integer> serverPorts;
 	
 	//Constructor
-	public ControlThreadClient(DatagramSocket s, InetAddress dst) {
+	public ControlThreadClient(Cliente c, DatagramSocket s, InetAddress dst) {
+		this.creator = c;
 		this.socket = s;
 		this.dst = dst;
 		scanner = new Scanner(System.in);
@@ -49,24 +52,49 @@ public class ControlThreadClient extends Thread{
 			//Comprobamos si el comando introducido es inválido
 			if(c.getCommand() == ControlMessageType.INVALID) {
 				System.out.println("Comando incorrecto");
+				printHelp();
+				continue;
+			}
+			
+			//Controlamos si es un comando de ayuda
+			if(c.getCommand() == ControlMessageType.HELP) {
+				printHelp();
+				continue;
+			}
+			
+			//Comprobamos si el puerto de destino es correcto
+			if(!creator.isServerPort(c.getDstPort())) {
+				System.out.println("Servidor inexistente");
+				printServersRunning();
 				continue;
 			}
 			
 			//Mandamos la peticion
-			byte[] buf = c.getBytes();
-			packet = new DatagramPacket(buf, buf.length, dst, this.serverPorts.get(c.getDstPort()));
+			byte[] buf = c.getBytes(); // TODO serializar
+			packet = new DatagramPacket(buf, buf.length, dst, c.getDstPort());
 			sendMessage(packet);
 			
 			//Recibimos respuesta
-			packet = new DatagramPacket(buf, buf.length);
-			String resp = receiveMessage(packet);
-			System.out.println(resp);
+//			packet = new DatagramPacket(buf, buf.length);
+//			String resp = receiveMessage(packet);
+//			System.out.println(resp);
 		}
 	}
 	
 	public void printPrompt() {
 		System.out.print("\nCliente:$ ");
-		//TODO Añadir ayuda de comandos
+	}
+	
+	public void printHelp() {
+		System.out.println("USAGE: <command> [id_server] [options] \n"
+				+ " sentrefresh <id_server> <time> : Establece el tiempo de refresco de un servidor\n"
+				+ " statistic : get statistics of paremeters sent by the servers\n"
+				+ " help : output this message");
+		printServersRunning();
+	}
+	
+	public void printServersRunning() { 
+		System.out.println("Servers running: "+creator.getServersRunning());
 	}
 	
 	public void sendMessage(DatagramPacket packet) {

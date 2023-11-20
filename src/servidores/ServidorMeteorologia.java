@@ -5,10 +5,10 @@ import messages.BroadcastMessage;
 public class ServidorMeteorologia extends Servidor {
 	//Constantes
 	public static final int CONTROL_PORT = 2003;
-	public static final String ID = "ServidorMeteorologia";
-	public static final String LLOVIENDO = "Lloviendo=";
-	public static final String VEL_VIENTO = "VelocidadViento=";
-	public static final String RADIACION = "Radiacion=";
+	public static final int ID = 3;
+	public static final String LLOVIENDO = "Lloviendo";
+	public static final String VEL_VIENTO = "VelocidadViento";
+	public static final String RADIACION = "Radiacion";
 	
 	//Atributos
 	private boolean lluvia; //Si o No
@@ -17,8 +17,7 @@ public class ServidorMeteorologia extends Servidor {
 	
 	//Constructor
 	public ServidorMeteorologia() {
-		super(CONTROL_PORT);
-		this.id = ID;
+		super(ID, CONTROL_PORT);
 	}
 	
 	//Getters & Setters
@@ -38,13 +37,10 @@ public class ServidorMeteorologia extends Servidor {
 	}
 
 	public String getParameters() {
-		BroadcastMessage msg = new BroadcastMessage();
-		msg.setId(ID);
-		msg.setParam1(LLOVIENDO+"="+isLluvia());
-		msg.setParam2(VEL_VIENTO+"="+getVelViento());
-		msg.setParam3(RADIACION+"="+getRadiacion());
-		
-		return msg.getMessage();
+		return this.xmlParser.serializeBroadcastMessage(String.valueOf(ID),
+				LLOVIENDO, String.valueOf(isLluvia()),
+				VEL_VIENTO, String.valueOf(getVelViento()),
+				RADIACION, String.valueOf(getRadiacion()));
 	}
 	
 	public String getID() {

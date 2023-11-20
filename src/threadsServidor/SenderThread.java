@@ -3,6 +3,7 @@ package threadsServidor;
 import java.io.*;
 import java.net.*;
 
+import serializacion.XMLParser;
 import servidores.Servidor;
 
 public class SenderThread extends Thread{
@@ -17,11 +18,7 @@ public class SenderThread extends Thread{
 	public SenderThread(Servidor serverCreator, DatagramSocket s) {
 		this.creator = serverCreator;
 		this.s = s;
-		try {
-			this.dstAddress = InetAddress.getByName("255.255.255.255"/*TODO cambiar*/);
-		} catch (UnknownHostException e) {
-			System.err.println("Error en la dirección de destino creada");
-		}
+		this.dstAddress = creator.getSendAddr();
 	}
 	
 	//Funcionalidad

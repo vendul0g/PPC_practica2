@@ -1,6 +1,6 @@
 package messages;
 
-public class ControlMessage {
+public class ControlMessage extends Message{
 	//Atributos
 	private ControlMessageType command;
 	private int dstPort;
@@ -36,10 +36,4 @@ public class ControlMessage {
 	public String toString() {
 		return command.toString();
 	}
-	
-//	public JSON serializeJSON(String s) {
-//		return null;
-//	}
-	
-//	public  
 }

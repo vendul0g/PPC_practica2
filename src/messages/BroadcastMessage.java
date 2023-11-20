@@ -1,30 +1,36 @@
 package messages;
 
-public class BroadcastMessage {
-	//Constantes
-	public static final String ID_SEPARATOR = ":";
-	public static final String VALUE_SEPARATOR = ",";
+import serializacion.XMLParser;
 
+public class BroadcastMessage extends Message{
 	//Atributos
-	private String id;
+	private XMLParser xmlParser;
+	private int id;
+	private String nameParam1;
 	private String param1; 
+	private String nameParam2;
 	private String param2;
+	private String nameParam3;
 	private String param3;
 	
 	//Constructor
 	public BroadcastMessage() {
-
+		this.xmlParser = new XMLParser();
 	}
 	
-	public BroadcastMessage(String id, String p1, String p2, String p3) {
+	public BroadcastMessage(int id, String np1, String p1, String np2, String p2, String np3, String p3) {
+		this.xmlParser = new XMLParser();
 		this.id = id;
+		this.nameParam1 = np1;
 		this.param1 = p1;
+		this.nameParam2 = np2;
 		this.param2 = p2;
+		this.nameParam3 = np3;
 		this.param3 = p3;
 	}
 	
 	//Setters
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	
@@ -40,10 +46,21 @@ public class BroadcastMessage {
 		this.param3 = p3;
 	}
 	
-	public String getMessage() {
-		return id+ID_SEPARATOR
-				+param1+VALUE_SEPARATOR
-				+param2+VALUE_SEPARATOR
-				+param3;
+	//Funcionalidad
+	public String serialize() {
+		return this.xmlParser.serializeBroadcastMessage(String.valueOf(id), 
+				nameParam1, String.valueOf(param1), 
+				nameParam2, String.valueOf(param2), 
+				nameParam3, String.valueOf(param3));
+	}
+	
+	public BroadcastMessage deserialize(String xml) {
+		return this.xmlParser.deserializeBroadcastMessage(xml);
+	}
+	
+	public String toString() {
+		return "{"+nameParam1+"="+param1+", "
+				+ nameParam2+"="+param2+", "
+				+ nameParam3+"="+param3+"}";
 	}
 }
