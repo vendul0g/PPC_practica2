@@ -1,11 +1,12 @@
 package servidores;
 
 import messages.BroadcastMessage;
+import serializacion.XMLBroadcastMessageParser;
 
 public class ServidorMeteorologia extends Servidor {
 	//Constantes
 	public static final int CONTROL_PORT = 2003;
-	public static final int ID = 3;
+	public static final int ID = CONTROL_PORT;
 	public static final String LLOVIENDO = "Lloviendo";
 	public static final String VEL_VIENTO = "VelocidadViento";
 	public static final String RADIACION = "Radiacion";
@@ -37,10 +38,10 @@ public class ServidorMeteorologia extends Servidor {
 	}
 
 	public String getParameters() {
-		return this.xmlParser.serializeBroadcastMessage(String.valueOf(ID),
-				LLOVIENDO, String.valueOf(isLluvia()),
-				VEL_VIENTO, String.valueOf(getVelViento()),
-				RADIACION, String.valueOf(getRadiacion()));
+		return new BroadcastMessage(ID,
+				LLOVIENDO, String.valueOf(isLluvia()), 
+				VEL_VIENTO, String.valueOf(getVelViento()), 
+				RADIACION, String.valueOf(getRadiacion())).serialize();
 	}
 	
 	public String getID() {

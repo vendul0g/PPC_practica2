@@ -5,7 +5,7 @@ import messages.BroadcastMessage;
 public class ServidorClima extends Servidor{
 	//Constantes
 	public static final int CONTROL_PORT = 2001;
-	public static final int ID = 1;
+	public static final int ID = CONTROL_PORT;
 	public static final String PRES_ATMOS = "PresionAtmosferica";
 	public static final String TEMP = "Temperatura";
 	public static final String HUMEDAD = "Humedad";

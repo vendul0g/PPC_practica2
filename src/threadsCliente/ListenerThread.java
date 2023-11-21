@@ -34,12 +34,12 @@ public class ListenerThread extends Thread{
 			msg = recieveMessage(packet, buf);
 			
 			//Anotamos el puerto de envío
-			creator.addServer(packet.getPort());
+			creator.addServer(packet.getPort(), packet.getAddress());
 			
 			//Mandamos a procesar el mensaje TODO al estadístico
 			BroadcastMessage bm = new BroadcastMessage().deserialize(msg);
 			if(bm != null) {
-				System.out.println(bm.toString());
+				if(creator.isVerbose()) System.out.println(bm.toString());
 				e.addEntradas(msg);
 			}
 		}

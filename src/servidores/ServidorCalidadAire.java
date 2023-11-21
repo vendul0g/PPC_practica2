@@ -1,11 +1,12 @@
 package servidores;
 
 import messages.BroadcastMessage;
+import serializacion.XMLBroadcastMessageParser;
 
 public class ServidorCalidadAire extends Servidor{
 	//Constantes
 	public static final int CONTROL_PORT = 2002;
-	public static final int ID = 2;
+	public static final int ID = CONTROL_PORT;
 	public static final String CON_CO2 = "ConcentracionCO2";
 	public static final String CON_O3 = "ConcentracionO3";
 	public static final String CON_PART_SUSP = "ConcentracionParticulasSuspension";
@@ -38,10 +39,10 @@ public class ServidorCalidadAire extends Servidor{
 	}
 	
 	public String getParameters() {
-		return this.xmlParser.serializeBroadcastMessage(String.valueOf(ID),
+		return new BroadcastMessage(ID,
 				CON_CO2, String.valueOf(getConCO2()),
 				CON_O3, String.valueOf(getConO3()),
-				CON_PART_SUSP, String.valueOf(getConPartSusp()));
+				CON_PART_SUSP, String.valueOf(getConPartSusp())).serialize();
 				
 	}
 	

@@ -19,55 +19,53 @@ public class Cliente {
 	private DatagramSocket socketControl;
 	private InetAddress address;
 	private Estadistico e;
-	private List<Integer> portServerMapper;
+	private Map<Integer, InetAddress> portServerMapper;
+	private boolean verbose;
 	
 	//Constructor
 	public Cliente() {
 		//Inicializamos valores
-		setAddress();
 		crearSocketListener();
-		crearSocketControl();
 		e = new Estadistico();
-		this.portServerMapper = new LinkedList<Integer>(); 
+		this.portServerMapper = new TreeMap<Integer, InetAddress>(); 
+		this.verbose = false;
 	}
 	
 	//Getters & Setters
-	public void addServer(int port) {
-		if(portServerMapper.contains(port))
+	public void addServer(int port, InetAddress addr) {
+		if(portServerMapper.get(port) != null)
 			return;
-		portServerMapper.add(port);
+		portServerMapper.put(port, addr);
 	}
 	
-	public boolean isServerPort(int port) {
-	    return this.portServerMapper.contains(Integer.valueOf(port));
+	public InetAddress getAddress(int port) {
+	    return this.portServerMapper.get(port);
 	}
 
 	
 	public String getServersRunning() {
 	    if(portServerMapper.isEmpty()) 
 	    	return null;
-	    String s = portServerMapper.get(0).toString();
-	    for(int i = 1; i < portServerMapper.size(); i++) {
-	    	s += ", "+portServerMapper.get(i).toString();
+	    String s = "";
+	    for(int i : portServerMapper.keySet()) {
+	    	s += "\n - [id]="+i+" - "+portServerMapper.get(i);
 	    }
 	    return s;
 	}
-
 	
-	//Funcionalidad
-	public void setAddress() {
-		try {
-			this.address = InetAddress.getByName("localhost");
-		} catch (UnknownHostException e) {
-			e.printStackTrace();
-			System.err.println("Error en la dirección de escucha");
-		}
+	public void setVerbose(boolean v) {
+		this.verbose = v;
+	}
+
+	public boolean isVerbose() {
+		return this.verbose;
 	}
 	
+	//Funcionalidad
 	public void run() {
 		//Creamos los hilos
 		ListenerThread l = new ListenerThread(this, socketListener, e);
-		ControlThreadClient c = new ControlThreadClient(this, socketControl, address);
+		ControlThreadClient c = new ControlThreadClient(this);
 		
 		//Invocamos el hilo de recepción de mensajes broadcast
 		l.start();
@@ -87,19 +85,8 @@ public class Cliente {
 		}
 	}
 	
-	public void crearSocketControl() {
-		try {
-			this.socketControl = new DatagramSocket();
-		} catch (SocketException e) {
-			e.printStackTrace();
-			System.err.println("Error creando el socket de control del cliente");
-		}
-	}
-
-	
 	public void closeSockets() {
 		this.socketListener.close();
-		this.socketControl.close();
 	}
 	
 	//Main

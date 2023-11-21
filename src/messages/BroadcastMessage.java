@@ -1,10 +1,9 @@
 package messages;
 
-import serializacion.XMLParser;
+import serializacion.XMLBroadcastMessageParser;
 
 public class BroadcastMessage extends Message{
 	//Atributos
-	private XMLParser xmlParser;
 	private int id;
 	private String nameParam1;
 	private String param1; 
@@ -15,11 +14,9 @@ public class BroadcastMessage extends Message{
 	
 	//Constructor
 	public BroadcastMessage() {
-		this.xmlParser = new XMLParser();
 	}
 	
 	public BroadcastMessage(int id, String np1, String p1, String np2, String p2, String np3, String p3) {
-		this.xmlParser = new XMLParser();
 		this.id = id;
 		this.nameParam1 = np1;
 		this.param1 = p1;
@@ -29,11 +26,39 @@ public class BroadcastMessage extends Message{
 		this.param3 = p3;
 	}
 	
-	//Setters
+	//Getters & Setters
 	public void setId(int id) {
 		this.id = id;
 	}
 	
+	public int getId() {
+		return id;
+	}
+
+	public String getNameParam1() {
+		return nameParam1;
+	}
+
+	public String getParam1() {
+		return param1;
+	}
+
+	public String getNameParam2() {
+		return nameParam2;
+	}
+
+	public String getParam2() {
+		return param2;
+	}
+
+	public String getNameParam3() {
+		return nameParam3;
+	}
+
+	public String getParam3() {
+		return param3;
+	}
+
 	public void setParam1(String p1) {
 		this.param1 = p1;
 	}
@@ -48,19 +73,16 @@ public class BroadcastMessage extends Message{
 	
 	//Funcionalidad
 	public String serialize() {
-		return this.xmlParser.serializeBroadcastMessage(String.valueOf(id), 
-				nameParam1, String.valueOf(param1), 
-				nameParam2, String.valueOf(param2), 
-				nameParam3, String.valueOf(param3));
+		return new XMLBroadcastMessageParser().serialize(this);
 	}
 	
 	public BroadcastMessage deserialize(String xml) {
-		return this.xmlParser.deserializeBroadcastMessage(xml);
+		return new XMLBroadcastMessageParser().deserialize(xml);
 	}
 	
 	public String toString() {
 		return "{"+nameParam1+"="+param1+", "
 				+ nameParam2+"="+param2+", "
 				+ nameParam3+"="+param3+"}";
-	}
+	}	
 }

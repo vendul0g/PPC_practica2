@@ -1,12 +1,16 @@
 package serializacion;
 
+import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.StringReader;
+import java.io.StringWriter;
+
 import javax.xml.XMLConstants;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
@@ -24,15 +28,10 @@ import servidores.ServidorCalidadAire;
 import servidores.ServidorClima;
 import servidores.ServidorMeteorologia;
 
-import java.io.*;
+public class XMLBroadcastMessageParser{
 
-public class XMLParser {
 	
-	public XMLParser() {
-		
-	}
-	
-	public String serializeBroadcastMessage(String id, String np1, String p1, String np2, String p2, String np3, String p3) {
+	public String serialize(BroadcastMessage bm) {
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder dBuilder;
 		try {
@@ -58,22 +57,22 @@ public class XMLParser {
 		
 		// Elemento id
 		Element idE = doc.createElement("ID");
-		idE.appendChild(doc.createTextNode(id));
+		idE.appendChild(doc.createTextNode(String.valueOf(bm.getId())));
 		rootElement.appendChild(idE);
 		
 		//Parámetro 1
-		Element param1 = doc.createElement(np1);
-		param1.appendChild(doc.createTextNode(p1));
+		Element param1 = doc.createElement(bm.getNameParam1());
+		param1.appendChild(doc.createTextNode(bm.getParam1()));
 		rootElement.appendChild(param1);
 	
 		//Parámetro 2
-		Element param2 = doc.createElement(np2);
-		param2.appendChild(doc.createTextNode(p2));
+		Element param2 = doc.createElement(bm.getNameParam2());
+		param2.appendChild(doc.createTextNode(bm.getParam2()));
 		rootElement.appendChild(param2);		
 	
 		//Parámetro 3
-		Element param3 = doc.createElement(np3);
-		param3.appendChild(doc.createTextNode(p3));
+		Element param3 = doc.createElement(bm.getNameParam3());
+		param3.appendChild(doc.createTextNode(bm.getParam3()));
 		rootElement.appendChild(param3);
 
 		// Convert to string
@@ -96,7 +95,7 @@ public class XMLParser {
 	
 //	public Message deserializeBroadcastMessage TODO general para XML y JSON
 	
-	public BroadcastMessage deserializeBroadcastMessage(String xml) {
+	public BroadcastMessage deserialize(String xml) {
 		// Leemos el documento XML
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder dBuilder;

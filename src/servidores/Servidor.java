@@ -5,7 +5,6 @@ import java.net.*;
 import java.util.Random;
 
 import addressCalculator.AddressCalculator;
-import serializacion.XMLParser;
 import threadsServidor.*;
 
 public abstract class Servidor {
@@ -16,30 +15,27 @@ public abstract class Servidor {
 	//Atributos
 	protected String id;
 	private int timeRefresh;
-	private DatagramSocket s;
+	private DatagramSocket serverSocket;
 	protected Random r;
-	private SenderThread sender;
+	private SenderThread senderT;
 	private ControlThreadServer controller;
 	private InetAddress broadcastAddr;
-	protected XMLParser xmlParser;
 	
 	//Constructor
 	public Servidor(int id, int port) {
 		createSocket(port);
 		broadcastAddr = AddressCalculator.getBroadcastAddress();
 		
-		this.sender = new SenderThread(this, getSocket());
+		this.senderT = new SenderThread(this, getSocket());
 		this.controller = new ControlThreadServer(this, getSocket());
 		
 		this.timeRefresh = DEFAULT_REFRESH;
 		this.r = new Random();
-		
-		this.xmlParser = new XMLParser();
 	}
 	
 	//Getters & Setters
 	protected DatagramSocket getSocket() {
-		return this.s;
+		return this.serverSocket;
 	}
 	
 	protected Random getRandom() {
@@ -66,13 +62,13 @@ public abstract class Servidor {
 	
 	//Funcionalidad
 	public void run() {
-		sender.start();
+		senderT.start();
 		controller.start();
 	}
 	
 	public void createSocket(int port) {
 		try {
-			s = new DatagramSocket(port);
+			serverSocket = new DatagramSocket(port);
 		}catch(IOException e) {
 			e.printStackTrace();
 			System.err.println("["+id+"]: Error con binding de servidor");

@@ -3,7 +3,6 @@ package threadsServidor;
 import java.io.*;
 import java.net.*;
 
-import serializacion.XMLParser;
 import servidores.Servidor;
 
 public class SenderThread extends Thread{

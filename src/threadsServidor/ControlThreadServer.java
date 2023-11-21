@@ -5,6 +5,7 @@ import java.net.*;
 import messages.ControlMessage;
 import messages.ControlMessageType;
 import messages.SetTimeRefreshMessage;
+import serializacion.XMLSetRefreshParser;
 import servidores.Servidor;
 
 import java.io.*;
@@ -34,9 +35,12 @@ public class ControlThreadServer extends Thread{
 			msg = receiveMessage(packet);
 			addr = packet.getAddress();
 			port = packet.getPort();
+			ControlMessage cm;
 			
 			//Procesamos el mensaje
-			proccesMesage(ControlMessageType.getType(msg));
+			if( (cm = new XMLSetRefreshParser().deserialize(msg)) != null) { // Mensaje SetRefresh
+				proccesMesage(cm);
+			}
 			
 			//Devolvemos un ACK
 //			buf = new ControlMessage(ControlMessageType.ACK).getBytes();

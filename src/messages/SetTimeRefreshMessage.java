@@ -1,5 +1,7 @@
 package messages;
 
+import serializacion.XMLSetRefreshParser;
+
 public class SetTimeRefreshMessage extends ControlMessage{
 	//Atributos
 	private int time;
@@ -22,6 +24,10 @@ public class SetTimeRefreshMessage extends ControlMessage{
 	
 	//Funcionalidad
 	public String toString() {
-		return getCommandString()+" "+getDstPort()+" "+time;
+		return getCommandString()+" "+getIdServer()+" "+time;
+	}
+	
+	public byte[] serialize() {
+		return new XMLSetRefreshParser(this).serialize().getBytes();
 	}
 }

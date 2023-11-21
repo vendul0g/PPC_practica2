@@ -1,9 +1,12 @@
 package messages;
 
+import serializacion.XMLControlMessageParser;
+import serializacion.XMLSetRefreshParser;
+
 public class ControlMessage extends Message{
 	//Atributos
 	private ControlMessageType command;
-	private int dstPort;
+	private int idServer;
 	
 	//Constructor
 	public ControlMessage(ControlMessageType c) {
@@ -12,7 +15,7 @@ public class ControlMessage extends Message{
 	
 	public ControlMessage(ControlMessageType c, int port) {
 		this.command = c;
-		this.dstPort = port;
+		this.idServer = port;
 	}
 	
 	//Getters & Setters
@@ -24,16 +27,17 @@ public class ControlMessage extends Message{
 		return command.toString();
 	}
 	
-	public byte[] getBytes() {
-		return toString().getBytes();
-	}
+//	public byte[] getBytes() {
+////		return toString().getBytes();
+//		XMLControlMessageParser cm = new XMLSetRefreshParser();
+//	}
 	
-	public int getDstPort() {
-		return dstPort;
+	public int getIdServer() {
+		return idServer;
 	}
 	
 	//Funcionalidad
-	public String toString() {
-		return command.toString();
-	}
+//	public String toString() {
+//		return command.toString();
+//	}
 }
