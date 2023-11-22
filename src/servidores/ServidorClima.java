@@ -1,6 +1,7 @@
 package servidores;
 
 import messages.BroadcastMessage;
+import messages.Message;
 
 public class ServidorClima extends Servidor{
 	//Constantes
@@ -12,12 +13,14 @@ public class ServidorClima extends Servidor{
 	
 	//Atributos
 	private double presionAtmosferica; //[950, 1020] hPa
-	private int temperatura; // [-20, 40] ºC
+	private int temperatura; // [-20, 40] ºC or F
 	private int humedad; // [0-100] %
+	private boolean farenheit;
 	
 	//Constructor
 	public ServidorClima() {
 		super(ID, CONTROL_PORT);
+		farenheit = false;
 	}
 
 	//Getters & Setters
@@ -27,9 +30,9 @@ public class ServidorClima extends Servidor{
 		return presionAtmosferica;
 	}
 
-	public int getTemperatura() {
-		this.temperatura = this.r.nextInt(-20,40);
-		return temperatura;
+	public int getTemperatura(boolean farenheit) {
+		this.temperatura = this.r.nextInt(15,35);
+		return farenheit ? (temperatura* 9/5) + 32 : temperatura;
 	}
 
 	public int getHumedad() {
@@ -37,11 +40,20 @@ public class ServidorClima extends Servidor{
 		return humedad;
 	}
 	
+	public boolean getFarenheit() {
+		return this.farenheit;
+	}
+	
+	public void setFarenheit(boolean f) {
+		this.farenheit = f;
+	}
+	
 	public String getParameters() {
-		return new BroadcastMessage(ID, 
+		BroadcastMessage bm = new BroadcastMessage(ID, 
 				PRES_ATMOS, String.valueOf(getPresionAtmosferica()), 
-				TEMP, String.valueOf(getTemperatura()), 
-				HUMEDAD, String.valueOf(getHumedad())).serialize();
+				TEMP, String.valueOf(getTemperatura(getFarenheit())), 
+				HUMEDAD, String.valueOf(getHumedad()));
+		return getMode() == Message.MODE_XML ? bm.serializeXML() : bm.serializeJSON();
 	}
 	
 	public String getID() {

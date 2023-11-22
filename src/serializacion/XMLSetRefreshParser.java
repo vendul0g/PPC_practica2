@@ -24,11 +24,11 @@ import org.w3c.dom.Element;
 
 import messages.ControlMessage;
 import messages.ControlMessageType;
-import messages.SetTimeRefreshMessage;
+import messages.SetRefreshMessage;
 
 public class XMLSetRefreshParser extends XMLControlMessageParser {
 	//Constructor
-	public XMLSetRefreshParser(SetTimeRefreshMessage cm) {
+	public XMLSetRefreshParser(SetRefreshMessage cm) {
 		super(cm);
 	}
 	
@@ -40,7 +40,7 @@ public class XMLSetRefreshParser extends XMLControlMessageParser {
 	public String serialize() {
 		//Añadimos el tiempo de refresco
 		Element timeR = doc.createElement("TimeRefresh");
-		timeR.appendChild(doc.createTextNode(String.valueOf(((SetTimeRefreshMessage) cm).getTime())));
+		timeR.appendChild(doc.createTextNode(String.valueOf(((SetRefreshMessage) cm).getTime())));
 		rootElement.appendChild(timeR);
 		
 		// Convert to string
@@ -99,9 +99,9 @@ public class XMLSetRefreshParser extends XMLControlMessageParser {
 		Element root = doc.getDocumentElement();
 		
 		//Sacamos los demás parámetros
-		String command = root.getElementsByTagName("Command").item(0).getTextContent();
+//		String command = root.getElementsByTagName("Command").item(0).getTextContent();
 		int idServer = Integer.valueOf(root.getElementsByTagName("serverID").item(0).getTextContent());
 		int time = Integer.valueOf(root.getElementsByTagName("TimeRefresh").item(0).getTextContent());
-		return new SetTimeRefreshMessage(ControlMessageType.SET_TIME_REFRESH, idServer, time);
+		return new SetRefreshMessage(ControlMessageType.SET_TIME_REFRESH, idServer, time);
 	}
 }

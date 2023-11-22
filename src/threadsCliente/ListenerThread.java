@@ -15,10 +15,10 @@ public class ListenerThread extends Thread{
 	private Estadistico e;
 	
 	//Constructor
-	public ListenerThread(Cliente c, DatagramSocket s, Estadistico e) {
+	public ListenerThread(Cliente c, DatagramSocket s) {
 		this.creator = c;
 		this.s = s;
-		this.e = e;
+		this.e = new Estadistico();
 	}
 	
 	//Funcionalidad

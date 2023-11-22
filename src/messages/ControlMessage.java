@@ -1,7 +1,7 @@
 package messages;
 
+import serializacion.JSONParser;
 import serializacion.XMLControlMessageParser;
-import serializacion.XMLSetRefreshParser;
 
 public class ControlMessage extends Message{
 	//Atributos
@@ -27,17 +27,14 @@ public class ControlMessage extends Message{
 		return command.toString();
 	}
 	
-//	public byte[] getBytes() {
-////		return toString().getBytes();
-//		XMLControlMessageParser cm = new XMLSetRefreshParser();
-//	}
-	
 	public int getIdServer() {
 		return idServer;
 	}
 	
 	//Funcionalidad
-//	public String toString() {
-//		return command.toString();
-//	}
+	public byte[] serialize(int mode){
+		return mode == Message.MODE_JSON 
+				? JSONParser.serialize(this).getBytes()
+				: new XMLControlMessageParser(this).serialize().getBytes();
+	}
 }

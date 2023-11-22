@@ -4,9 +4,14 @@ import java.net.*;
 
 import messages.ControlMessage;
 import messages.ControlMessageType;
-import messages.SetTimeRefreshMessage;
+import messages.Message;
+import messages.SetModeMessage;
+import messages.SetRefreshMessage;
+import serializacion.JSONParser;
+import serializacion.XMLSetModeMessageParser;
 import serializacion.XMLSetRefreshParser;
 import servidores.Servidor;
+import servidores.ServidorClima;
 
 import java.io.*;
 
@@ -25,21 +30,42 @@ public class ControlThreadServer extends Thread{
 	public void run() {
 		byte[] buf = new byte[256];
 		DatagramPacket packet;
-		InetAddress addr;
-		int port;
+//		InetAddress addr;
+//		int port;
 		String msg;
 		
 		while(true) {
+			ControlMessage cm;
+
 			//Recibimos mensajes de control
 			packet = new DatagramPacket(buf, buf.length);
 			msg = receiveMessage(packet);
-			addr = packet.getAddress();
-			port = packet.getPort();
-			ControlMessage cm;
+//			addr = packet.getAddress();
+//			port = packet.getPort();
 			
 			//Procesamos el mensaje
-			if( (cm = new XMLSetRefreshParser().deserialize(msg)) != null) { // Mensaje SetRefresh
-				proccesMesage(cm);
+			if(msg.startsWith("{")) { //JSON
+				cm = JSONParser.deserialize(msg, ControlMessage.class);
+				if(cm.getCommand() == ControlMessageType.DISABLE 
+						|| cm.getCommand() == ControlMessageType.ENABLE)
+					proccesMessage(cm);
+				if(cm.getCommand() == ControlMessageType.SET_TIME_REFRESH) {
+					cm = JSONParser.deserialize(msg, SetRefreshMessage.class); 
+					proccesMessage(cm);
+				}
+				else if(cm.getCommand() == ControlMessageType.BROADCAST_MODE
+						|| cm.getCommand() == ControlMessageType.CHANGE_UNIT) {
+					cm = JSONParser.deserialize(msg, SetModeMessage.class);
+					proccesMessage(cm);
+				}
+			} 
+			else { //XML
+				if( (cm = new XMLSetRefreshParser().deserialize(msg)) != null) { //SetRefresh
+					proccesMessage(cm);
+				}
+				else if( (cm = new XMLSetModeMessageParser().deserialize(msg)) != null) {//SetMode
+					proccesMessage(cm);
+				}
 			}
 			
 			//Devolvemos un ACK
@@ -69,13 +95,33 @@ public class ControlThreadServer extends Thread{
 		}
 	}
 	
-	public void proccesMesage(ControlMessage c) {
+	public void proccesMessage(ControlMessage c) {
 		switch(c.getCommand()) {
 		case SET_TIME_REFRESH:
-			this.creator.setTimeRefresh( ((SetTimeRefreshMessage) c).getTime()*1000 );
+			this.creator.setTimeRefresh( ((SetRefreshMessage) c).getTime()*1000 );
+			break;
+		
+		case BROADCAST_MODE:
+			this.creator.setMode( ((SetModeMessage) c).getMode() );
+			break;
+			
+		case CHANGE_UNIT:
+			boolean f = ((SetModeMessage) c).getMode() == Message.MODE_FARENHEIT ? true : false;
+			if (this.creator instanceof ServidorClima) {
+				((ServidorClima) this.creator).setFarenheit(f);
+			}
+			break;
+			
+		case DISABLE:
+			this.creator.setDeshabilitado(true);
+			break;
+		
+		case ENABLE:
+			this.creator.setDeshabilitado(false);
 			break;
 			
 		default:
+			System.out.println("["+this.creator.getID()+"]: Mensaje de control fallido:\n"+c.toString());
 			break;
 		}
 		//TODO implementar NACK por si la petición no es exitosa

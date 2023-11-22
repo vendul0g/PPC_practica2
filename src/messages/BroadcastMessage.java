@@ -1,5 +1,6 @@
 package messages;
 
+import serializacion.JSONParser;
 import serializacion.XMLBroadcastMessageParser;
 
 public class BroadcastMessage extends Message{
@@ -72,12 +73,26 @@ public class BroadcastMessage extends Message{
 	}
 	
 	//Funcionalidad
-	public String serialize() {
+	public BroadcastMessage deserialize(String msg) {
+		if(msg.startsWith("{")) return deserializeJSON(msg);
+		if(msg.startsWith("<")) return deserializeXML(msg);
+		return null;
+	}
+	
+	public String serializeXML() {
 		return new XMLBroadcastMessageParser().serialize(this);
 	}
 	
-	public BroadcastMessage deserialize(String xml) {
+	private BroadcastMessage deserializeXML(String xml) {
 		return new XMLBroadcastMessageParser().deserialize(xml);
+	}
+	
+	public String serializeJSON() {
+		return JSONParser.serialize(this);
+	}
+	
+	private BroadcastMessage deserializeJSON(String json) {
+		return JSONParser.deserialize(json, BroadcastMessage.class);
 	}
 	
 	public String toString() {

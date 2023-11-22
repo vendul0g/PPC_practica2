@@ -1,16 +1,9 @@
 package threadsCliente;
 
 import java.net.*;
-import java.util.Map;
 import java.util.Scanner;
-import java.util.TreeMap;
-
 import cliente.Cliente;
 import messages.*;
-import servidores.ServidorCalidadAire;
-import servidores.ServidorClima;
-import servidores.ServidorMeteorologia;
-
 import java.io.*;
 
 public class ControlThreadClient extends Thread{
@@ -18,12 +11,26 @@ public class ControlThreadClient extends Thread{
 	private DatagramSocket socket;
 	private Cliente creator;
 	private Scanner scanner;
+	private int serializationMode;
 	
 	//Constructor
 	public ControlThreadClient(Cliente c) {
 		this.creator = c;
 		scanner = new Scanner(System.in);
 		this.socket = createSocket();
+		
+		this.serializationMode = Message.MODE_XML; //Por defecto en JSON
+	}
+	
+	//Getters & Setters
+	public int getSerializationMode() {
+		return this.serializationMode;
+	}
+	
+	public void setSerializationMode(int m) {
+		if(m == Message.MODE_XML || m == Message.MODE_JSON) {
+			this.serializationMode = m;
+		}
 	}
 	
 	//Funcionalidad
@@ -65,22 +72,39 @@ public class ControlThreadClient extends Thread{
 				continue;
 			}
 			
-			//Caso de set refresh
-			//Comprobamos servidor existente
-			if(creator.getAddress(c.getIdServer()) == null) {
-				System.out.println("Servidor inexistente");
-				printServersRunning();
+			//Comprobamos si se quiere cambiar el modo de serialización de los mensajes de control
+			if(c.getCommand() == ControlMessageType.CONTROL_MODE) {
+				this.serializationMode = ((SetModeMessage) c).getMode();	
 				continue;
 			}
 			
-			//Mandamos la peticion
-			if(c instanceof SetTimeRefreshMessage) {
-				byte[] buf = ((SetTimeRefreshMessage)c).serialize();
+			//Caso de mensajes con envío 
+			
+			//Se quiere cambiar el tiempo de refresco
+			if(c.getCommand() == ControlMessageType.SET_TIME_REFRESH && checkAddress(c)) {
+				byte[] buf = ((SetRefreshMessage)c).serialize(getSerializationMode());
 				packet = new DatagramPacket(buf, buf.length, creator.getAddress(c.getIdServer()), c.getIdServer());
-				System.out.println("addr="+creator.getAddress(c.getIdServer())+", port="+c.getIdServer());
-				sendMessage(socket, packet);
+				sendMessage(packet);
 			}
 			
+			//Comprobamos si se quiere cambiar el modo de serialización de los mensajes broadcast
+			//o un cambio de temperatura
+			if( (c.getCommand() == ControlMessageType.BROADCAST_MODE 
+					|| c.getCommand() == ControlMessageType.CHANGE_UNIT)
+					&& checkAddress(c)) {
+				byte[] buf = ((SetModeMessage) c).serialize(getSerializationMode());		
+				packet = new DatagramPacket(buf, buf.length, creator.getAddress(c.getIdServer()), c.getIdServer());
+				sendMessage(packet);
+			}
+			
+			//Comprobamos si se quiere habilitar/deshabilitar el envio de datos de un servidor
+			if( (c.getCommand() == ControlMessageType.DISABLE 
+					|| c.getCommand() == ControlMessageType.ENABLE)
+					&& checkAddress(c)) {
+				byte[] buf = c.serialize(getSerializationMode());
+				packet = new DatagramPacket(buf, buf.length, creator.getAddress(c.getIdServer()), c.getIdServer());
+				sendMessage(packet);
+			}
 			
 			//Recibimos respuesta
 //			packet = new DatagramPacket(buf, buf.length);
@@ -91,6 +115,15 @@ public class ControlThreadClient extends Thread{
 //		closeSocket(socket);
 	}
 	
+	private boolean checkAddress(ControlMessage cm) {
+		if(creator.getAddress(cm.getIdServer()) == null) {
+			System.out.println("Servidor inexistente");
+			printServersRunning();
+			return false;
+		}
+		return true;
+	}
+	
 	public void printPrompt() {
 		System.out.print("\nCliente:$ ");
 	}
@@ -98,9 +131,14 @@ public class ControlThreadClient extends Thread{
 	public void printHelp() {
 		System.out.println("USAGE: <command> [id_server] [options] \n"
 				+ " setrefresh <id_server> <time> : Establece el tiempo de refresco de un servidor\n"
+				+ " controlmode <xml/json> : Establece el tipo de serialización para los mensajes de control\n"
+				+ " broadcastmode <id_server> <xml/json> : Establece el tipo de serialización para los mensajes broadcast\n"
+				+ " changeunit <id_server> <celsius/farenheit> : Cambia la unidad de temperatura\n"
+				+ " disable <id_server> : Deshabilita el envío de datos del servidor con id_server\n"
+				+ " enable <id_server> : Habilita el envío de datos del servidor con id_server\n"
 				+ " statistic : Muestra las estadísticas de valores ofrecidas por los servidores\n"
-				+ " verbose: Muestra los mensajes que van enviando los servidores\n"
-				+ " notverbose: Deja de mostrar los mensajes que van enviando los servidores\n"
+				+ " verbose : Muestra los mensajes que van enviando los servidores\n"
+				+ " notverbose : Deja de mostrar los mensajes que van enviando los servidores\n"
 				+ " help : Muestra este mensaje");
 		printServersRunning();
 	}
@@ -109,7 +147,7 @@ public class ControlThreadClient extends Thread{
 		System.out.println("Servers running: "+creator.getServersRunning());
 	}
 	
-	public void sendMessage(DatagramSocket socket, DatagramPacket packet) {
+	public void sendMessage(DatagramPacket packet) {
 		try {
 			socket.send(packet);
 		} catch (IOException e) {

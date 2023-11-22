@@ -1,6 +1,7 @@
 package servidores;
 
 import messages.BroadcastMessage;
+import messages.Message;
 import serializacion.XMLBroadcastMessageParser;
 
 public class ServidorMeteorologia extends Servidor {
@@ -38,10 +39,11 @@ public class ServidorMeteorologia extends Servidor {
 	}
 
 	public String getParameters() {
-		return new BroadcastMessage(ID,
+		BroadcastMessage bm = new BroadcastMessage(ID,
 				LLOVIENDO, String.valueOf(isLluvia()), 
 				VEL_VIENTO, String.valueOf(getVelViento()), 
-				RADIACION, String.valueOf(getRadiacion())).serialize();
+				RADIACION, String.valueOf(getRadiacion()));
+		return getMode() == Message.MODE_XML ? bm.serializeXML() : bm.serializeJSON();
 	}
 	
 	public String getID() {

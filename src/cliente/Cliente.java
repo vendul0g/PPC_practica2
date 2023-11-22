@@ -9,6 +9,7 @@ import java.util.Set;
 import java.util.TreeMap;
 
 import estadistico.Estadistico;
+import messages.Message;
 import servidores.Servidor;
 import threadsCliente.ControlThreadClient;
 import threadsCliente.ListenerThread;
@@ -16,9 +17,6 @@ import threadsCliente.ListenerThread;
 public class Cliente {	
 	//Atributos
 	private DatagramSocket socketListener;
-	private DatagramSocket socketControl;
-	private InetAddress address;
-	private Estadistico e;
 	private Map<Integer, InetAddress> portServerMapper;
 	private boolean verbose;
 	
@@ -26,7 +24,6 @@ public class Cliente {
 	public Cliente() {
 		//Inicializamos valores
 		crearSocketListener();
-		e = new Estadistico();
 		this.portServerMapper = new TreeMap<Integer, InetAddress>(); 
 		this.verbose = false;
 	}
@@ -64,7 +61,7 @@ public class Cliente {
 	//Funcionalidad
 	public void run() {
 		//Creamos los hilos
-		ListenerThread l = new ListenerThread(this, socketListener, e);
+		ListenerThread l = new ListenerThread(this, socketListener);
 		ControlThreadClient c = new ControlThreadClient(this);
 		
 		//Invocamos el hilo de recepción de mensajes broadcast

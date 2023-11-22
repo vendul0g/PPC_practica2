@@ -23,11 +23,13 @@ public class SenderThread extends Thread{
 	//Funcionalidad
 	public void run() {
 		while(true) {
-			//Cogemos el mensaje del servidor para enviarlo a la red
-			byte[] buff = createMessage();
-			
-			//Enviamos el mensaje
-			sendMessage(buff);
+			if(!this.creator.isDeshabilitado()) {
+				//Cogemos el mensaje del servidor para enviarlo a la red
+				byte[] buff = createMessage();
+				
+				//Enviamos el mensaje
+				sendMessage(buff);
+			}
 			
 			//Esperamos el tiempo de refresco hasta mandar el siguiente mensaje
 			sleep();
