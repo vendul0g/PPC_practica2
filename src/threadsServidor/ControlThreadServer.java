@@ -48,7 +48,7 @@ public class ControlThreadServer extends Thread{
 			logger.log(msg);
 			
 			//parseamos el mensaje y procesamos en consecuencia
-			if(msg.startsWith("{")) { //JSON
+			if(msg.startsWith("J")) { //JSON
 				cm = JSONParser.deserialize(msg, ControlMessage.class);
 				if(cm.getCommand() == ControlMessageType.DISABLE 
 						|| cm.getCommand() == ControlMessageType.ENABLE)

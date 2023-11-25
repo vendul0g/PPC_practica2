@@ -53,11 +53,4 @@ public class SetModeMessage extends ControlMessage{
 			this.mode = -1;
 		}
 	}
-	
-	public byte[] serialize(int mode){
-		return mode == Message.MODE_JSON 
-				? JSONParser.serialize(this).getBytes()
-				: new XMLSetModeMessageParser(this).serialize().getBytes();
-	}
-	
 }

@@ -147,3 +147,18 @@
 </ControlMessage>
 
 ---------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ControlMessage>
+  <Command>CHANGE_UNIT</Command>
+  <serverID>2001</serverID>
+  <mode>2</mode>
+</ControlMessage>
+
+---------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ControlMessage>
+  <Command>DISABLE</Command>
+  <serverID>2001</serverID>
+</ControlMessage>
+
+---------------------------------------------------------

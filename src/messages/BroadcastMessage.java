@@ -94,13 +94,13 @@ public class BroadcastMessage extends Message{
 	
 	//Funcionalidad
 	public BroadcastMessage deserialize(String msg) {
-		if(msg.startsWith("{")) return deserializeJSON(msg);
-		if(msg.startsWith("<")) return deserializeXML(msg);
+		if(msg.startsWith("J")) return deserializeJSON(msg);
+		if(msg.startsWith("X")) return deserializeXML(msg);
 		return null;
 	}
 	
 	public String serializeXML() {
-		return new XMLBroadcastMessageParser().serialize(this);
+		return XML_HEADER + new XMLBroadcastMessageParser().serialize(this);
 	}
 	
 	private BroadcastMessage deserializeXML(String xml) {
@@ -108,7 +108,7 @@ public class BroadcastMessage extends Message{
 	}
 	
 	public String serializeJSON() {
-		return JSONParser.serialize(this);
+		return JSON_HEADER+JSONParser.serialize(this);
 	}
 	
 	private BroadcastMessage deserializeJSON(String json) {

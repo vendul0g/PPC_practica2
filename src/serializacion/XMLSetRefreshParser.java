@@ -61,6 +61,7 @@ public class XMLSetRefreshParser extends XMLControlMessageParser {
 	}
 	
 	public ControlMessage deserialize(String xml) {
+		xml = xml.substring(1, xml.length());
 		if(!validateDocument(xml))
 			return null;
 		

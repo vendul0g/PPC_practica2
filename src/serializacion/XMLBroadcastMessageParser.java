@@ -121,6 +121,7 @@ public class XMLBroadcastMessageParser{
 	
 	
 	public BroadcastMessage deserialize(String xml) {
+		xml = xml.substring(1, xml.length());
 		// Leemos el documento XML
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder dBuilder;

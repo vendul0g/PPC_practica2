@@ -106019,3 +106019,2639 @@
 </BroadcastMessage>
 
 ---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>false</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>49.98</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>913</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>366</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.89</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>0.56</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2001</ID>
+  <PresionAtmosferica>
+    <Valor>1013.15</Valor>
+    <Medida>hPa</Medida>
+  </PresionAtmosferica>
+  <Temperatura>
+    <Valor>24</Valor>
+    <Medida>ºC</Medida>
+  </Temperatura>
+  <Humedad>
+    <Valor>80</Valor>
+    <Medida>%</Medida>
+  </Humedad>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>true</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>16.05</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>1065</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>402</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.27</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>9.29</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2001</ID>
+  <PresionAtmosferica>
+    <Valor>998.65</Valor>
+    <Medida>hPa</Medida>
+  </PresionAtmosferica>
+  <Temperatura>
+    <Valor>20</Valor>
+    <Medida>ºC</Medida>
+  </Temperatura>
+  <Humedad>
+    <Valor>76</Valor>
+    <Medida>%</Medida>
+  </Humedad>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>true</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>25.01</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>946</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>315</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.32</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>8.17</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2001</ID>
+  <PresionAtmosferica>
+    <Valor>995.16</Valor>
+    <Medida>hPa</Medida>
+  </PresionAtmosferica>
+  <Temperatura>
+    <Valor>16</Valor>
+    <Medida>ºC</Medida>
+  </Temperatura>
+  <Humedad>
+    <Valor>44</Valor>
+    <Medida>%</Medida>
+  </Humedad>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>true</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>23.53</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>900</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>353</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.72</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>8.99</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2001</ID>
+  <PresionAtmosferica>
+    <Valor>990.47</Valor>
+    <Medida>hPa</Medida>
+  </PresionAtmosferica>
+  <Temperatura>
+    <Valor>26</Valor>
+    <Medida>ºC</Medida>
+  </Temperatura>
+  <Humedad>
+    <Valor>7</Valor>
+    <Medida>%</Medida>
+  </Humedad>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>true</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>31.76</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>1151</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>401</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.92</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>6.85</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2001</ID>
+  <PresionAtmosferica>
+    <Valor>991.5</Valor>
+    <Medida>hPa</Medida>
+  </PresionAtmosferica>
+  <Temperatura>
+    <Valor>26</Valor>
+    <Medida>ºC</Medida>
+  </Temperatura>
+  <Humedad>
+    <Valor>35</Valor>
+    <Medida>%</Medida>
+  </Humedad>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>true</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>46.64</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>667</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>449</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.58</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>19.43</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2001</ID>
+  <PresionAtmosferica>
+    <Valor>981.07</Valor>
+    <Medida>hPa</Medida>
+  </PresionAtmosferica>
+  <Temperatura>
+    <Valor>16</Valor>
+    <Medida>ºC</Medida>
+  </Temperatura>
+  <Humedad>
+    <Valor>29</Valor>
+    <Medida>%</Medida>
+  </Humedad>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>false</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>0.47</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>800</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>391</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.73</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>18.43</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2001</ID>
+  <PresionAtmosferica>
+    <Valor>992.03</Valor>
+    <Medida>hPa</Medida>
+  </PresionAtmosferica>
+  <Temperatura>
+    <Valor>15</Valor>
+    <Medida>ºC</Medida>
+  </Temperatura>
+  <Humedad>
+    <Valor>94</Valor>
+    <Medida>%</Medida>
+  </Humedad>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>false</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>4.07</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>904</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2001</ID>
+  <PresionAtmosferica>
+    <Valor>973.42</Valor>
+    <Medida>hPa</Medida>
+  </PresionAtmosferica>
+  <Temperatura>
+    <Valor>26</Valor>
+    <Medida>ºC</Medida>
+  </Temperatura>
+  <Humedad>
+    <Valor>70</Valor>
+    <Medida>%</Medida>
+  </Humedad>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>420</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.71</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>7.85</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>false</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>45.55</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>691</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2001</ID>
+  <PresionAtmosferica>
+    <Valor>1018.82</Valor>
+    <Medida>hPa</Medida>
+  </PresionAtmosferica>
+  <Temperatura>
+    <Valor>26</Valor>
+    <Medida>ºC</Medida>
+  </Temperatura>
+  <Humedad>
+    <Valor>89</Valor>
+    <Medida>%</Medida>
+  </Humedad>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>438</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.2</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>34.22</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>false</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>17.42</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>618</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2001</ID>
+  <PresionAtmosferica>
+    <Valor>993.88</Valor>
+    <Medida>hPa</Medida>
+  </PresionAtmosferica>
+  <Temperatura>
+    <Valor>29</Valor>
+    <Medida>ºC</Medida>
+  </Temperatura>
+  <Humedad>
+    <Valor>87</Valor>
+    <Medida>%</Medida>
+  </Humedad>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>330</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.18</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>15.9</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>false</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>6.08</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>950</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2001</ID>
+  <PresionAtmosferica>
+    <Valor>998.14</Valor>
+    <Medida>hPa</Medida>
+  </PresionAtmosferica>
+  <Temperatura>
+    <Valor>30</Valor>
+    <Medida>ºC</Medida>
+  </Temperatura>
+  <Humedad>
+    <Valor>90</Valor>
+    <Medida>%</Medida>
+  </Humedad>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>375</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.19</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>6.34</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>false</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>6.6</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>402</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>423</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.7</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>6.3</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2001</ID>
+  <PresionAtmosferica>
+    <Valor>959.31</Valor>
+    <Medida>hPa</Medida>
+  </PresionAtmosferica>
+  <Temperatura>
+    <Valor>25</Valor>
+    <Medida>ºC</Medida>
+  </Temperatura>
+  <Humedad>
+    <Valor>31</Valor>
+    <Medida>%</Medida>
+  </Humedad>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>false</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>39.26</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>655</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2001</ID>
+  <PresionAtmosferica>
+    <Valor>983.42</Valor>
+    <Medida>hPa</Medida>
+  </PresionAtmosferica>
+  <Temperatura>
+    <Valor>30</Valor>
+    <Medida>ºC</Medida>
+  </Temperatura>
+  <Humedad>
+    <Valor>91</Valor>
+    <Medida>%</Medida>
+  </Humedad>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>416</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.95</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>25.87</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>false</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>17.21</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>1015</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>323</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.98</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>5.98</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>true</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>3.5</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>916</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>371</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.51</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>17.87</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>true</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>23.14</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>994</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>276</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.65</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>19.46</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2001</ID>
+  <PresionAtmosferica>
+    <Valor>991.33</Valor>
+    <Medida>hPa</Medida>
+  </PresionAtmosferica>
+  <Temperatura>
+    <Valor>30</Valor>
+    <Medida>ºC</Medida>
+  </Temperatura>
+  <Humedad>
+    <Valor>6</Valor>
+    <Medida>%</Medida>
+  </Humedad>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>false</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>17.53</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>499</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>401</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.38</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>25.47</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>true</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>22.78</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>787</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>289</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.16</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>13.06</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>true</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>15.39</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>1003</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>429</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.23</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>22.5</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>true</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>47.49</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>1066</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>304</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.16</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>20.46</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2001</ID>
+  <PresionAtmosferica>
+    <Valor>970.25</Valor>
+    <Medida>hPa</Medida>
+  </PresionAtmosferica>
+  <Temperatura>
+    <Valor>34</Valor>
+    <Medida>ºC</Medida>
+  </Temperatura>
+  <Humedad>
+    <Valor>13</Valor>
+    <Medida>%</Medida>
+  </Humedad>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>true</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>30.15</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>449</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>421</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.45</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>21.96</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>true</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>19.26</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>958</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>409</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.49</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>11.68</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>false</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>33.57</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>1085</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>260</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.39</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>10.81</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>false</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>8.56</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>810</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>310</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.01</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>3.31</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2001</ID>
+  <PresionAtmosferica>
+    <Valor>960.03</Valor>
+    <Medida>hPa</Medida>
+  </PresionAtmosferica>
+  <Temperatura>
+    <Valor>25</Valor>
+    <Medida>ºC</Medida>
+  </Temperatura>
+  <Humedad>
+    <Valor>95</Valor>
+    <Medida>%</Medida>
+  </Humedad>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>false</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>9.83</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>858</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>376</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.78</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>15.11</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>false</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>5.81</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>651</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>357</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.08</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>5.28</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>true</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>1.98</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>1017</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>327</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.74</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>1.38</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>true</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>32.85</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>499</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>287</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.53</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>8.48</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2001</ID>
+  <PresionAtmosferica>
+    <Valor>968.46</Valor>
+    <Medida>hPa</Medida>
+  </PresionAtmosferica>
+  <Temperatura>
+    <Valor>21</Valor>
+    <Medida>ºC</Medida>
+  </Temperatura>
+  <Humedad>
+    <Valor>29</Valor>
+    <Medida>%</Medida>
+  </Humedad>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>false</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>15.73</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>878</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>274</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.72</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>2.02</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>false</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>12.63</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>761</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>401</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.29</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>17.3</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>true</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>29.46</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>882</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>387</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.74</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>20.59</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>true</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>46.63</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>503</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>306</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.6</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>34.64</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2001</ID>
+  <PresionAtmosferica>
+    <Valor>995.36</Valor>
+    <Medida>hPa</Medida>
+  </PresionAtmosferica>
+  <Temperatura>
+    <Valor>26</Valor>
+    <Medida>ºC</Medida>
+  </Temperatura>
+  <Humedad>
+    <Valor>39</Valor>
+    <Medida>%</Medida>
+  </Humedad>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>false</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>23.75</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>895</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>309</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.35</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>17.92</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>true</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>13.06</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>1131</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>278</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.84</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>10.53</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>true</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>30.7</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>455</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>404</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.02</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>25.75</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>false</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>35.96</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>662</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>318</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.53</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>30.77</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2001</ID>
+  <PresionAtmosferica>
+    <Valor>963.67</Valor>
+    <Medida>hPa</Medida>
+  </PresionAtmosferica>
+  <Temperatura>
+    <Valor>19</Valor>
+    <Medida>ºC</Medida>
+  </Temperatura>
+  <Humedad>
+    <Valor>19</Valor>
+    <Medida>%</Medida>
+  </Humedad>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>true</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>49.72</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>1118</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>282</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.23</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>21.09</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>false</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>35.49</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>880</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>299</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.25</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>37.0</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>true</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>46.74</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>907</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>396</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.66</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>35.47</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>false</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>0.55</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>578</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>372</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>1.0</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>22.51</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2001</ID>
+  <PresionAtmosferica>
+    <Valor>979.39</Valor>
+    <Medida>hPa</Medida>
+  </PresionAtmosferica>
+  <Temperatura>
+    <Valor>30</Valor>
+    <Medida>ºC</Medida>
+  </Temperatura>
+  <Humedad>
+    <Valor>58</Valor>
+    <Medida>%</Medida>
+  </Humedad>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>true</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>27.03</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>795</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>251</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.85</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>18.82</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>true</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>27.43</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>858</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>370</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.71</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>25.67</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>true</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>10.05</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>590</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>279</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.7</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>18.63</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>true</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>27.25</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>1019</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>292</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.4</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>5.45</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2001</ID>
+  <PresionAtmosferica>
+    <Valor>959.08</Valor>
+    <Medida>hPa</Medida>
+  </PresionAtmosferica>
+  <Temperatura>
+    <Valor>34</Valor>
+    <Medida>ºC</Medida>
+  </Temperatura>
+  <Humedad>
+    <Valor>86</Valor>
+    <Medida>%</Medida>
+  </Humedad>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>false</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>46.12</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>888</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>260</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.08</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>26.73</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>true</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>5.71</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>810</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>305</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.3</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>3.79</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>false</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>27.06</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>545</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>336</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.03</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>28.61</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>false</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>3.57</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>962</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>316</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.45</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>39.1</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2001</ID>
+  <PresionAtmosferica>
+    <Valor>968.97</Valor>
+    <Medida>hPa</Medida>
+  </PresionAtmosferica>
+  <Temperatura>
+    <Valor>20</Valor>
+    <Medida>ºC</Medida>
+  </Temperatura>
+  <Humedad>
+    <Valor>88</Valor>
+    <Medida>%</Medida>
+  </Humedad>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>false</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>46.02</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>886</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>359</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.77</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>16.33</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>false</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>19.88</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>673</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>413</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.86</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>16.89</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>false</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>19.43</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>806</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>269</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.7</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>1.21</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>true</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>34.47</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>1017</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>367</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.18</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>22.67</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2001</ID>
+  <PresionAtmosferica>
+    <Valor>952.66</Valor>
+    <Medida>hPa</Medida>
+  </PresionAtmosferica>
+  <Temperatura>
+    <Valor>27</Valor>
+    <Medida>ºC</Medida>
+  </Temperatura>
+  <Humedad>
+    <Valor>0</Valor>
+    <Medida>%</Medida>
+  </Humedad>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>false</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>49.93</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>645</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>272</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.06</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>29.89</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>false</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>29.25</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>768</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>313</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.63</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>18.87</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>false</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>26.75</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>508</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2002</ID>
+  <ConcentracionCO2>
+    <Valor>383</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionCO2>
+  <ConcentracionO3>
+    <Valor>0.19</Valor>
+    <Medida>ppm</Medida>
+  </ConcentracionO3>
+  <ConcentracionParticulasSuspension>
+    <Valor>38.2</Valor>
+    <Medida>microgramos/m3</Medida>
+  </ConcentracionParticulasSuspension>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>true</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>37.51</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>944</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2001</ID>
+  <PresionAtmosferica>
+    <Valor>973.34</Valor>
+    <Medida>hPa</Medida>
+  </PresionAtmosferica>
+  <Temperatura>
+    <Valor>21</Valor>
+    <Medida>ºC</Medida>
+  </Temperatura>
+  <Humedad>
+    <Valor>71</Valor>
+    <Medida>%</Medida>
+  </Humedad>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>true</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>9.33</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>855</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>false</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>10.92</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>535</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2003</ID>
+  <Lloviendo>
+    <Valor>true</Valor>
+    <Medida/>
+  </Lloviendo>
+  <VelocidadViento>
+    <Valor>37.32</Valor>
+    <Medida>m/s</Medida>
+  </VelocidadViento>
+  <Radiacion>
+    <Valor>1110</Valor>
+    <Medida>W/m2</Medida>
+  </Radiacion>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2001</ID>
+  <PresionAtmosferica>
+    <Valor>965.6</Valor>
+    <Medida>hPa</Medida>
+  </PresionAtmosferica>
+  <Temperatura>
+    <Valor>28</Valor>
+    <Medida>ºC</Medida>
+  </Temperatura>
+  <Humedad>
+    <Valor>47</Valor>
+    <Medida>%</Medida>
+  </Humedad>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2001</ID>
+  <PresionAtmosferica>
+    <Valor>1013.93</Valor>
+    <Medida>hPa</Medida>
+  </PresionAtmosferica>
+  <Temperatura>
+    <Valor>29</Valor>
+    <Medida>ºC</Medida>
+  </Temperatura>
+  <Humedad>
+    <Valor>75</Valor>
+    <Medida>%</Medida>
+  </Humedad>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2001</ID>
+  <PresionAtmosferica>
+    <Valor>960.14</Valor>
+    <Medida>hPa</Medida>
+  </PresionAtmosferica>
+  <Temperatura>
+    <Valor>32</Valor>
+    <Medida>ºC</Medida>
+  </Temperatura>
+  <Humedad>
+    <Valor>86</Valor>
+    <Medida>%</Medida>
+  </Humedad>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2001</ID>
+  <PresionAtmosferica>
+    <Valor>985.51</Valor>
+    <Medida>hPa</Medida>
+  </PresionAtmosferica>
+  <Temperatura>
+    <Valor>17</Valor>
+    <Medida>ºC</Medida>
+  </Temperatura>
+  <Humedad>
+    <Valor>81</Valor>
+    <Medida>%</Medida>
+  </Humedad>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2001</ID>
+  <PresionAtmosferica>
+    <Valor>1016.37</Valor>
+    <Medida>hPa</Medida>
+  </PresionAtmosferica>
+  <Temperatura>
+    <Valor>23</Valor>
+    <Medida>ºC</Medida>
+  </Temperatura>
+  <Humedad>
+    <Valor>52</Valor>
+    <Medida>%</Medida>
+  </Humedad>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2001</ID>
+  <PresionAtmosferica>
+    <Valor>978.08</Valor>
+    <Medida>hPa</Medida>
+  </PresionAtmosferica>
+  <Temperatura>
+    <Valor>16</Valor>
+    <Medida>ºC</Medida>
+  </Temperatura>
+  <Humedad>
+    <Valor>41</Valor>
+    <Medida>%</Medida>
+  </Humedad>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2001</ID>
+  <PresionAtmosferica>
+    <Valor>994.33</Valor>
+    <Medida>hPa</Medida>
+  </PresionAtmosferica>
+  <Temperatura>
+    <Valor>33</Valor>
+    <Medida>ºC</Medida>
+  </Temperatura>
+  <Humedad>
+    <Valor>52</Valor>
+    <Medida>%</Medida>
+  </Humedad>
+</BroadcastMessage>
+
+---------------------------------------------------------
+X<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BroadcastMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BroadcastMessage.xsd">
+  <ID>2001</ID>
+  <PresionAtmosferica>
+    <Valor>1013.64</Valor>
+    <Medida>hPa</Medida>
+  </PresionAtmosferica>
+  <Temperatura>
+    <Valor>16</Valor>
+    <Medida>ºC</Medida>
+  </Temperatura>
+  <Humedad>
+    <Valor>46</Valor>
+    <Medida>%</Medida>
+  </Humedad>
+</BroadcastMessage>
+
+---------------------------------------------------------
+J{"id":2001,"nameParam1":"PresionAtmosferica","param1":"988.12","medida1":"hPa","nameParam2":"Temperatura","param2":"32","medida2":"ºC","nameParam3":"Humedad","param3":"42","medida3":"%"}
+---------------------------------------------------------
+J{"id":2001,"nameParam1":"PresionAtmosferica","param1":"988.85","medida1":"hPa","nameParam2":"Temperatura","param2":"20","medida2":"ºC","nameParam3":"Humedad","param3":"28","medida3":"%"}
+---------------------------------------------------------
+J{"id":2001,"nameParam1":"PresionAtmosferica","param1":"1017.9","medida1":"hPa","nameParam2":"Temperatura","param2":"21","medida2":"ºC","nameParam3":"Humedad","param3":"31","medida3":"%"}
+---------------------------------------------------------
+J{"id":2001,"nameParam1":"PresionAtmosferica","param1":"960.88","medida1":"hPa","nameParam2":"Temperatura","param2":"29","medida2":"ºC","nameParam3":"Humedad","param3":"85","medida3":"%"}
+---------------------------------------------------------

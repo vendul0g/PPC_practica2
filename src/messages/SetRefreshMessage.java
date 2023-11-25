@@ -27,10 +27,4 @@ public class SetRefreshMessage extends ControlMessage{
 	public String toString() {
 		return getCommandString()+" "+getIdServer()+" "+time;
 	}
-	
-	public byte[] serialize(int mode) {
-		return mode == Message.MODE_JSON 
-				? JSONParser.serialize(this).getBytes() 
-				: new XMLSetRefreshParser(this).serialize().getBytes(); 
-	}
 }

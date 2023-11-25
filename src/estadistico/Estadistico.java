@@ -52,7 +52,6 @@ public class Estadistico {
 	}
 
 	private void setTempMedia(String tempMedia) {
-		System.out.println(tempMedia+" - "+this.tempMedia);
 		this.tempMedia += Integer.parseInt(tempMedia);
 	}
 

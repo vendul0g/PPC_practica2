@@ -12,7 +12,7 @@ public class JSONParser {
     }
 
     public static <T> T deserialize(String json, Class<T> clazz) {
-        return gson.fromJson(json, clazz);
+        return gson.fromJson(json.substring(1, json.length()), clazz);
     }
     
 }

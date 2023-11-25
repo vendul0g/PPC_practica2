@@ -2,6 +2,7 @@ package messages;
 
 import serializacion.JSONParser;
 import serializacion.XMLControlMessageParser;
+import serializacion.XMLSetRefreshParser;
 
 public class ControlMessage extends Message{
 	//Atributos
@@ -34,7 +35,7 @@ public class ControlMessage extends Message{
 	//Funcionalidad
 	public byte[] serialize(int mode){
 		return mode == Message.MODE_JSON 
-				? JSONParser.serialize(this).getBytes()
-				: new XMLControlMessageParser(this).serialize().getBytes();
+				? (JSON_HEADER +JSONParser.serialize(this)).getBytes()
+				: (XML_HEADER + new XMLControlMessageParser(this).serialize()).getBytes();
 	}
 }
