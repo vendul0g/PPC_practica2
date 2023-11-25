@@ -1,6 +1,7 @@
 package messages;
 
 import serializacion.JSONParser;
+import serializacion.XMLControlMessageParser;
 import serializacion.XMLSetModeMessageParser;
 import serializacion.XMLSetRefreshParser;
 
@@ -53,4 +54,15 @@ public class SetModeMessage extends ControlMessage{
 			this.mode = -1;
 		}
 	}
+	
+	public byte[] serialize(int mode){
+		String s = "";
+		if(mode == Message.MODE_JSON) {
+			s += JSON_HEADER + JSONParser.serialize(this);
+			return s.getBytes();
+		}
+		s += XML_HEADER + new XMLSetModeMessageParser(this).serialize();
+		return s.getBytes();
+	}
+	
 }

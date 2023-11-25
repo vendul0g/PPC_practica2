@@ -92,6 +92,9 @@ public class ControlThreadClient extends Thread{
 			}
 				
 			//Caso de mensajes con envío 
+			if(!checkAddress(c)) {
+				continue;
+			}
 			//Se quiere cambiar el tiempo de refresco
 			if( c.getCommand() == ControlMessageType.SET_TIME_REFRESH &&
 				checkAddress(c)) {
@@ -110,9 +113,8 @@ public class ControlThreadClient extends Thread{
 			}
 			
 			//Comprobamos si se quiere habilitar/deshabilitar el envio de datos de un servidor
-			else if( (c.getCommand() == ControlMessageType.DISABLE
-					|| c.getCommand() == ControlMessageType.ENABLE)
-					&& checkAddress(c)) {
+			else if( c.getCommand() == ControlMessageType.DISABLE
+					|| c.getCommand() == ControlMessageType.ENABLE) {
 				buf = c.serialize(getSerializationMode());
 			}
 			

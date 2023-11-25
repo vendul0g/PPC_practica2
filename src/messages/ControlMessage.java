@@ -34,8 +34,12 @@ public class ControlMessage extends Message{
 	
 	//Funcionalidad
 	public byte[] serialize(int mode){
-		return mode == Message.MODE_JSON 
-				? (JSON_HEADER +JSONParser.serialize(this)).getBytes()
-				: (XML_HEADER + new XMLControlMessageParser(this).serialize()).getBytes();
+		String s = "";
+		if(mode == Message.MODE_JSON) {
+			s += JSON_HEADER + JSONParser.serialize(this);
+			return s.getBytes();
+		}
+		s += XML_HEADER + new XMLControlMessageParser(this).serialize();
+		return s.getBytes();
 	}
 }

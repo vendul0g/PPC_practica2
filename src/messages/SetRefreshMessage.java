@@ -1,6 +1,7 @@
 package messages;
 
 import serializacion.JSONParser;
+import serializacion.XMLControlMessageParser;
 import serializacion.XMLSetRefreshParser;
 
 public class SetRefreshMessage extends ControlMessage{
@@ -26,5 +27,15 @@ public class SetRefreshMessage extends ControlMessage{
 	//Funcionalidad
 	public String toString() {
 		return getCommandString()+" "+getIdServer()+" "+time;
+	}
+	
+	public byte[] serialize(int mode) {
+		String s = "";
+		if(mode == Message.MODE_JSON) {
+			s += JSON_HEADER + JSONParser.serialize(this);
+			return s.getBytes();
+		}
+		s += XML_HEADER + new XMLSetRefreshParser(this).serialize();
+		return s.getBytes(); 
 	}
 }
