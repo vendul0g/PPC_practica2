@@ -24,7 +24,6 @@ import org.w3c.dom.Element;
 
 import messages.ControlMessage;
 import messages.ControlMessageType;
-import messages.SetRefreshMessage;
 
 public class XMLControlMessageParser {
 	//Atributos

@@ -3,10 +3,8 @@ package threadsCliente;
 import java.net.*;
 
 import cliente.Cliente;
-import estadistico.Estadistico;
 import estadistico.Logger;
 import messages.BroadcastMessage;
-import serializacion.XMLBroadcastMessageParser;
 
 import java.io.*;
 

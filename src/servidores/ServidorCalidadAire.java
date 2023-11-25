@@ -2,7 +2,6 @@ package servidores;
 
 import messages.BroadcastMessage;
 import messages.Message;
-import serializacion.XMLBroadcastMessageParser;
 
 public class ServidorCalidadAire extends Servidor{
 	//Constantes

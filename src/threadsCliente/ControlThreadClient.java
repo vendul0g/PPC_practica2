@@ -7,10 +7,6 @@ import messages.*;
 import java.io.*;
 
 public class ControlThreadClient extends Thread{
-	//Constantes
-	private static final int MAX_ATTEMPTS = 5;
-	private static final int TIMEOUT = 5;
-	
 	//Atributos
 	private DatagramSocket socket;
 	private Cliente creator;

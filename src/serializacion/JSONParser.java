@@ -2,8 +2,6 @@ package serializacion;
 
 import com.google.gson.Gson;
 
-import messages.BroadcastMessage;
-
 public class JSONParser {
     private static final Gson gson = new Gson();
 

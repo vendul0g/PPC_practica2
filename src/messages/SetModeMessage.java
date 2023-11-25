@@ -1,9 +1,7 @@
 package messages;
 
 import serializacion.JSONParser;
-import serializacion.XMLControlMessageParser;
 import serializacion.XMLSetModeMessageParser;
-import serializacion.XMLSetRefreshParser;
 
 public class SetModeMessage extends ControlMessage{
 	//Atributos

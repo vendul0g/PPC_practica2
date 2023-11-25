@@ -25,7 +25,6 @@ import org.w3c.dom.Element;
 import messages.ControlMessage;
 import messages.ControlMessageType;
 import messages.SetModeMessage;
-import messages.SetRefreshMessage;
 
 public class XMLSetModeMessageParser extends XMLControlMessageParser{
 	//Constructor

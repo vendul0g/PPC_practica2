@@ -2,7 +2,6 @@ package messages;
 
 import serializacion.JSONParser;
 import serializacion.XMLControlMessageParser;
-import serializacion.XMLSetRefreshParser;
 
 public class ControlMessage extends Message{
 	//Atributos
