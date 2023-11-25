@@ -2,12 +2,14 @@ package threadsServidor;
 
 import java.net.*;
 
+import estadistico.Logger;
 import messages.ControlMessage;
 import messages.ControlMessageType;
 import messages.Message;
 import messages.SetModeMessage;
 import messages.SetRefreshMessage;
 import serializacion.JSONParser;
+import serializacion.XMLControlMessageParser;
 import serializacion.XMLSetModeMessageParser;
 import serializacion.XMLSetRefreshParser;
 import servidores.Servidor;
@@ -16,22 +18,25 @@ import servidores.ServidorClima;
 import java.io.*;
 
 public class ControlThreadServer extends Thread{
+	//Constantes
+	private static final String LOGFILE = "/home/alvaro/Documents/PPC/Practica2_PPC/src/estadistico/controlLog.txt";
+	
 	//Atributos
 	private Servidor creator;
 	private DatagramSocket socket;
+	private Logger logger;
 	
 	//Constructor
 	public ControlThreadServer(Servidor server, DatagramSocket s) {
 		this.creator = server;
 		this.socket = s;
+		this.logger = new Logger(LOGFILE);
 	}
 	
 	//Funcionalidad
 	public void run() {
 		byte[] buf = new byte[256];
 		DatagramPacket packet;
-//		InetAddress addr;
-//		int port;
 		String msg;
 		
 		while(true) {
@@ -40,10 +45,9 @@ public class ControlThreadServer extends Thread{
 			//Recibimos mensajes de control
 			packet = new DatagramPacket(buf, buf.length);
 			msg = receiveMessage(packet);
-//			addr = packet.getAddress();
-//			port = packet.getPort();
+			logger.log(msg);
 			
-			//Procesamos el mensaje
+			//parseamos el mensaje y procesamos en consecuencia
 			if(msg.startsWith("{")) { //JSON
 				cm = JSONParser.deserialize(msg, ControlMessage.class);
 				if(cm.getCommand() == ControlMessageType.DISABLE 
@@ -60,18 +64,19 @@ public class ControlThreadServer extends Thread{
 				}
 			} 
 			else { //XML
-				if( (cm = new XMLSetRefreshParser().deserialize(msg)) != null) { //SetRefresh
+				if( (cm = new XMLControlMessageParser().deserialize(msg)) != null) {
+					//Disable or Enable
 					proccesMessage(cm);
 				}
-				else if( (cm = new XMLSetModeMessageParser().deserialize(msg)) != null) {//SetMode
+				else if( (cm = new XMLSetRefreshParser().deserialize(msg)) != null) {
+					//SetRefresh
+					proccesMessage(cm);
+				}
+				else if( (cm = new XMLSetModeMessageParser().deserialize(msg)) != null) {
+					//Set broadcast mode or Change unit
 					proccesMessage(cm);
 				}
 			}
-			
-			//Devolvemos un ACK
-//			buf = new ControlMessage(ControlMessageType.ACK).getBytes();
-//			packet = new DatagramPacket(buf, buf.length, addr, port);
-//			sendMessage(packet);
 		}
 	}
 	
@@ -108,7 +113,8 @@ public class ControlThreadServer extends Thread{
 		case CHANGE_UNIT:
 			boolean f = ((SetModeMessage) c).getMode() == Message.MODE_FARENHEIT ? true : false;
 			if (this.creator instanceof ServidorClima) {
-				((ServidorClima) this.creator).setFarenheit(f);
+				if(f) ((ServidorClima) this.creator).setMedidaT(ServidorClima.FARENHEIT);
+				else  ((ServidorClima) this.creator).setMedidaT(ServidorClima.CELSIUS);
 			}
 			break;
 			
@@ -121,9 +127,8 @@ public class ControlThreadServer extends Thread{
 			break;
 			
 		default:
-			System.out.println("["+this.creator.getID()+"]: Mensaje de control fallido:\n"+c.toString());
+			System.err.println("["+this.creator.getID()+"]: Mensaje de control fallido:\n"+c.toString());
 			break;
 		}
-		//TODO implementar NACK por si la petición no es exitosa
 	}
 }

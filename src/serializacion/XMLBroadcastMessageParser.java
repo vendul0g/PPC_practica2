@@ -62,18 +62,45 @@ public class XMLBroadcastMessageParser{
 		
 		//Parámetro 1
 		Element param1 = doc.createElement(bm.getNameParam1());
-		param1.appendChild(doc.createTextNode(bm.getParam1()));
 		rootElement.appendChild(param1);
+		
+		//Valor parámetro 1
+		Element inner11 = doc.createElement("Valor");
+		inner11.appendChild(doc.createTextNode(bm.getParam1()));
+		param1.appendChild(inner11);
+		
+		//Medida parámetro 1
+		Element inner12 = doc.createElement("Medida");
+		inner12.appendChild(doc.createTextNode(bm.getMedida1()));
+		param1.appendChild(inner12);
 	
 		//Parámetro 2
 		Element param2 = doc.createElement(bm.getNameParam2());
-		param2.appendChild(doc.createTextNode(bm.getParam2()));
 		rootElement.appendChild(param2);		
-	
+
+		//Valor parámetro 2
+		Element inner21 = doc.createElement("Valor");
+		inner21.appendChild(doc.createTextNode(bm.getParam2()));
+		param2.appendChild(inner21);
+		
+		//Medida parámetro 2
+		Element inner22 = doc.createElement("Medida");
+		inner22.appendChild(doc.createTextNode(bm.getMedida2()));
+		param2.appendChild(inner22);
+		
 		//Parámetro 3
 		Element param3 = doc.createElement(bm.getNameParam3());
-		param3.appendChild(doc.createTextNode(bm.getParam3()));
 		rootElement.appendChild(param3);
+
+		//Valor parámetro 3
+		Element inner31 = doc.createElement("Valor");
+		inner31.appendChild(doc.createTextNode(bm.getParam3()));
+		param3.appendChild(inner31);
+		
+		//Medida parámetro 3
+		Element inner32 = doc.createElement("Medida");
+		inner32.appendChild(doc.createTextNode(bm.getMedida3()));
+		param3.appendChild(inner32);
 
 		// Convert to string
 		TransformerFactory tf = TransformerFactory.newInstance();
@@ -90,10 +117,8 @@ public class XMLBroadcastMessageParser{
 			System.err.println("Error serializando XML");
 			return null;
 		}
-	
 	}
 	
-//	public Message deserializeBroadcastMessage TODO general para XML y JSON
 	
 	public BroadcastMessage deserialize(String xml) {
 		// Leemos el documento XML
@@ -134,7 +159,7 @@ public class XMLBroadcastMessageParser{
 		//Validamos el documento XML
 		try {
 			SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-	        Schema schema = factory.newSchema(new StreamSource(new File("src/serializacion/BroadcastMessageServidorClima.xsd"))); // Load your XSD file
+	        Schema schema = factory.newSchema(new StreamSource(new File("src/serializacion/BroadcastMessageServidorClima.xsd"))); 
 	        Validator validator = schema.newValidator();
 	        validator.validate(new StreamSource(new StringReader(xml)));
 		}catch (Exception e) {
@@ -145,17 +170,30 @@ public class XMLBroadcastMessageParser{
 		// El documento es válido
 		
 		int id = Integer.valueOf(root.getElementsByTagName("ID").item(0).getTextContent());
-		String presAtmos = root.getElementsByTagName(ServidorClima.PRES_ATMOS).item(0).getTextContent();
-		String temp = root.getElementsByTagName(ServidorClima.TEMP).item(0).getTextContent();
-		String hum = root.getElementsByTagName(ServidorClima.HUMEDAD).item(0).getTextContent();
-		return new BroadcastMessage(id, ServidorClima.PRES_ATMOS, presAtmos, ServidorClima.TEMP, temp, ServidorClima.HUMEDAD, hum);
+		
+		Element aux = (Element) root.getElementsByTagName(ServidorClima.PRES_ATMOS).item(0);
+		String presAtmos = aux.getElementsByTagName("Valor").item(0).getTextContent();
+		String mPA = aux.getElementsByTagName("Medida").item(0).getTextContent();
+		
+		aux = (Element) root.getElementsByTagName(ServidorClima.TEMP).item(0);
+		String temp = aux.getElementsByTagName("Valor").item(0).getTextContent();
+		String mT = aux.getElementsByTagName("Medida").item(0).getTextContent();
+		
+		aux = (Element) root.getElementsByTagName(ServidorClima.HUMEDAD).item(0);
+		String hum = aux.getElementsByTagName("Valor").item(0).getTextContent();
+		String mH = aux.getElementsByTagName("Medida").item(0).getTextContent();
+		
+		return new BroadcastMessage(id, 
+				ServidorClima.PRES_ATMOS, presAtmos, mPA,
+				ServidorClima.TEMP, temp, mT,
+				ServidorClima.HUMEDAD, hum, mH);
 	}
 	
 	private BroadcastMessage deserializeServidorMeteorologia(String xml, Element root) {
 		//Validamos el documento XML
 		try {
 			SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-	        Schema schema = factory.newSchema(new StreamSource(new File("src/serializacion/BroadcastMessageServidorClima.xsd"))); // Load your XSD file
+	        Schema schema = factory.newSchema(new StreamSource(new File("src/serializacion/BroadcastMessageServidorMeteorologia.xsd"))); 
 	        Validator validator = schema.newValidator();
 	        validator.validate(new StreamSource(new StringReader(xml)));
 		}catch (Exception e) {
@@ -164,17 +202,30 @@ public class XMLBroadcastMessageParser{
 			return null;
 		}
 		int id = Integer.valueOf(root.getElementsByTagName("ID").item(0).getTextContent());
-		String lloviendo = root.getElementsByTagName(ServidorMeteorologia.LLOVIENDO).item(0).getTextContent();
-		String velViento = root.getElementsByTagName(ServidorMeteorologia.VEL_VIENTO).item(0).getTextContent();
-		String radiacion = root.getElementsByTagName(ServidorMeteorologia.RADIACION).item(0).getTextContent();
-		return new BroadcastMessage(id, ServidorMeteorologia.LLOVIENDO, lloviendo, ServidorMeteorologia.VEL_VIENTO, velViento, ServidorMeteorologia.RADIACION, radiacion);
+		
+		Element aux = (Element) root.getElementsByTagName(ServidorMeteorologia.LLOVIENDO).item(0);
+		String lloviendo= aux.getElementsByTagName("Valor").item(0).getTextContent();
+		String mL = aux.getElementsByTagName("Medida").item(0).getTextContent();
+		
+		aux = (Element) root.getElementsByTagName(ServidorMeteorologia.VEL_VIENTO).item(0);
+		String velViento = aux.getElementsByTagName("Valor").item(0).getTextContent();
+		String mV = aux.getElementsByTagName("Medida").item(0).getTextContent();
+		
+		aux = (Element) root.getElementsByTagName(ServidorMeteorologia.RADIACION).item(0);
+		String radiacion= aux.getElementsByTagName("Valor").item(0).getTextContent();
+		String mR = aux.getElementsByTagName("Medida").item(0).getTextContent();
+		
+		return new BroadcastMessage(id, 
+				ServidorMeteorologia.LLOVIENDO, lloviendo, mL,
+				ServidorMeteorologia.VEL_VIENTO, velViento, mV,
+				ServidorMeteorologia.RADIACION, radiacion, mR);
 	}
 	
 	private BroadcastMessage deserializeServidorCalidadAire(String xml, Element root) {
 		//Validamos el documento XML
 		try {
 			SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-	        Schema schema = factory.newSchema(new StreamSource(new File("src/serializacion/BroadcastMessageServidorClima.xsd"))); // Load your XSD file
+	        Schema schema = factory.newSchema(new StreamSource(new File("src/serializacion/BroadcastMessageServidorCalidadAire.xsd"))); 
 	        Validator validator = schema.newValidator();
 	        validator.validate(new StreamSource(new StringReader(xml)));
 		}catch (Exception e) {
@@ -182,11 +233,23 @@ public class XMLBroadcastMessageParser{
 			System.err.println("El documento XML no cumple el formato del XSD");
 			return null;
 		}
-		
 		int id = Integer.valueOf(root.getElementsByTagName("ID").item(0).getTextContent());
-		String conCO2 = root.getElementsByTagName(ServidorCalidadAire.CON_CO2).item(0).getTextContent();
-		String conO3 = root.getElementsByTagName(ServidorCalidadAire.CON_O3).item(0).getTextContent();
-		String conPartSusp = root.getElementsByTagName(ServidorCalidadAire.CON_PART_SUSP).item(0).getTextContent();
-		return new BroadcastMessage(id, ServidorCalidadAire.CON_CO2, conCO2, ServidorCalidadAire.CON_O3, conO3, ServidorCalidadAire.CON_PART_SUSP, conPartSusp);
+		
+		Element aux = (Element) root.getElementsByTagName(ServidorCalidadAire.CON_CO2).item(0);
+		String conCO2= aux.getElementsByTagName("Valor").item(0).getTextContent();
+		String mCO = aux.getElementsByTagName("Medida").item(0).getTextContent();
+		
+		aux = (Element) root.getElementsByTagName(ServidorCalidadAire.CON_O3).item(0);
+		String conO3 = aux.getElementsByTagName("Valor").item(0).getTextContent();
+		String mO3 = aux.getElementsByTagName("Medida").item(0).getTextContent();
+		
+		aux = (Element) root.getElementsByTagName(ServidorCalidadAire.CON_PART_SUSP).item(0);
+		String conPartSusp= aux.getElementsByTagName("Valor").item(0).getTextContent();
+		String mCP = aux.getElementsByTagName("Medida").item(0).getTextContent();
+		
+		return new BroadcastMessage(id, 
+				ServidorCalidadAire.CON_CO2, conCO2, mCO,
+				ServidorCalidadAire.CON_O3, conO3, mO3,
+				ServidorCalidadAire.CON_PART_SUSP, conPartSusp, mCP);
 	}
 }

@@ -68,10 +68,12 @@ public abstract class Servidor {
 		return this.modeBroadcast;
 	}
 	
-	public void setMode(int m) {
+	public boolean setMode(int m) {
 		if(m == Message.MODE_XML || m == Message.MODE_JSON) {
 			this.modeBroadcast = m;
+			return true;
 		}
+		return false;
 	}
 	
 	public boolean isDeshabilitado() {

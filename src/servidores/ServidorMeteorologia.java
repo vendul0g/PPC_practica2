@@ -15,13 +15,18 @@ public class ServidorMeteorologia extends Servidor {
 	//Atributos
 	private boolean lluvia; //Si o No
 	private double velViento; //[0,50] m/s
+	private String medidaV;
 	private int radiacion; //[800,1200] W/m2
+	private String medidaR;
 	
 	//Constructor
 	public ServidorMeteorologia() {
 		super(ID, CONTROL_PORT);
+		
+		this.medidaV = "m/s";
+		this.medidaR = "W/m2";
 	}
-	
+
 	//Getters & Setters
 	public boolean isLluvia() {
 		this.lluvia = this.r.nextBoolean();
@@ -34,15 +39,24 @@ public class ServidorMeteorologia extends Servidor {
 	}
 
 	public int getRadiacion() {
-		this.radiacion = this.r.nextInt();
+		this.radiacion = this.r.nextInt()%400+800;
 		return radiacion;
+	}
+	
+
+	public String getMedidaV() {
+		return medidaV;
+	}
+
+	public String getMedidaR() {
+		return medidaR;
 	}
 
 	public String getParameters() {
 		BroadcastMessage bm = new BroadcastMessage(ID,
-				LLOVIENDO, String.valueOf(isLluvia()), 
-				VEL_VIENTO, String.valueOf(getVelViento()), 
-				RADIACION, String.valueOf(getRadiacion()));
+				LLOVIENDO, String.valueOf(isLluvia()), "", 
+				VEL_VIENTO, String.valueOf(getVelViento()), getMedidaV(), 
+				RADIACION, String.valueOf(getRadiacion()), getMedidaR());
 		return getMode() == Message.MODE_XML ? bm.serializeXML() : bm.serializeJSON();
 	}
 	

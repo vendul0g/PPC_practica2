@@ -8,25 +8,33 @@ public class BroadcastMessage extends Message{
 	private int id;
 	private String nameParam1;
 	private String param1; 
+	private String medida1;
 	private String nameParam2;
 	private String param2;
+	private String medida2;
 	private String nameParam3;
 	private String param3;
+	private String medida3;
 	
 	//Constructor
 	public BroadcastMessage() {
 	}
 	
-	public BroadcastMessage(int id, String np1, String p1, String np2, String p2, String np3, String p3) {
+	public BroadcastMessage(int id, String nameParam1, String param1, String medida1, String nameParam2, String param2,
+			String medida2, String nameParam3, String param3, String medida3) {
+		super();
 		this.id = id;
-		this.nameParam1 = np1;
-		this.param1 = p1;
-		this.nameParam2 = np2;
-		this.param2 = p2;
-		this.nameParam3 = np3;
-		this.param3 = p3;
+		this.nameParam1 = nameParam1;
+		this.param1 = param1;
+		this.medida1 = medida1;
+		this.nameParam2 = nameParam2;
+		this.param2 = param2;
+		this.medida2 = medida2;
+		this.nameParam3 = nameParam3;
+		this.param3 = param3;
+		this.medida3 = medida3;
 	}
-	
+
 	//Getters & Setters
 	public void setId(int id) {
 		this.id = id;
@@ -58,6 +66,18 @@ public class BroadcastMessage extends Message{
 
 	public String getParam3() {
 		return param3;
+	}
+	
+	public String getMedida1() {
+		return medida1;
+	}
+
+	public String getMedida2() {
+		return medida2;
+	}
+
+	public String getMedida3() {
+		return medida3;
 	}
 
 	public void setParam1(String p1) {
@@ -96,8 +116,9 @@ public class BroadcastMessage extends Message{
 	}
 	
 	public String toString() {
-		return "{"+nameParam1+"="+param1+", "
-				+ nameParam2+"="+param2+", "
-				+ nameParam3+"="+param3+"}";
+		return  id+": "
+				+nameParam1+"="+param1+" "+medida1+", "
+				+ nameParam2+"="+param2+" "+medida2+", "
+				+ nameParam3+"="+param3+" "+medida3;
 	}	
 }

@@ -14,13 +14,20 @@ public class ServidorCalidadAire extends Servidor{
 	
 	//Atributos
 	private int conCO2; //[350,450] ppm
+	private String medidaCO;
 	private double conO3; //[0,1] ppm
+	private String medidaO3;
 	private double conPartSusp; //[0,40] microgramos/m3
+	private String medidaCP;
 	
 	
 	//Constructor
 	public ServidorCalidadAire() {
 		super(ID, CONTROL_PORT);
+		
+		this.medidaCO = "ppm";
+		this.medidaO3 = "ppm";
+		this.medidaCP = "microgramos/m3";
 	}
 	
 	//Getters & Setters
@@ -39,11 +46,23 @@ public class ServidorCalidadAire extends Servidor{
 		return conPartSusp;
 	}
 	
+	public String getMedidaCO() {
+		return medidaCO;
+	}
+
+	public String getMedidaO3() {
+		return medidaO3;
+	}
+
+	public String getMedidaCP() {
+		return medidaCP;
+	}
+	
 	public String getParameters() {
 		BroadcastMessage bm = new BroadcastMessage(ID,
-				CON_CO2, String.valueOf(getConCO2()),
-				CON_O3, String.valueOf(getConO3()),
-				CON_PART_SUSP, String.valueOf(getConPartSusp()));
+				CON_CO2, String.valueOf(getConCO2()), getMedidaCO(),
+				CON_O3, String.valueOf(getConO3()), getMedidaO3(),
+				CON_PART_SUSP, String.valueOf(getConPartSusp()), getMedidaCP());
 		return getMode() == Message.MODE_XML ? bm.serializeXML() : bm.serializeJSON();
 	}
 	

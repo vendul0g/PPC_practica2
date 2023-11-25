@@ -85,18 +85,8 @@ public class XMLControlMessageParser {
 	}
 	
 	public ControlMessage deserialize(String xml) {
-		//Validamos el documento XML
-		try {
-			SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-	        Schema schema = factory.newSchema(new StreamSource(new File("src/serializacion/ControlMessage.xsd"))); // Load your XSD file
-	        Validator validator = schema.newValidator();
-	        validator.validate(new StreamSource(new StringReader(xml)));
-		}catch (Exception e) {
-			e.printStackTrace();
-			System.err.println("El documento XML no cumple el formato del XSD");
+		if(!validateDocument(xml))
 			return null;
-		}
-		// El documento es válido
 		
 		// Leemos el documento XML
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -123,8 +113,22 @@ public class XMLControlMessageParser {
 		Element root = doc.getDocumentElement();
 		
 		//Sacamos los demás parámetros
-//		String command = root.getElementsByTagName("Command").item(0).getTextContent();
+		String command = root.getElementsByTagName("Command").item(0).getTextContent();
 		int idServer = Integer.valueOf(root.getElementsByTagName("serverID").item(0).getTextContent());
-		return new ControlMessage(ControlMessageType.DISABLE, idServer);
+		return new ControlMessage(ControlMessageType.getByName(command), idServer);
+	}
+	
+	private boolean validateDocument(String xml) {
+		//Validamos el documento XML
+		try {
+			SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+	        Schema schema = factory.newSchema(new StreamSource(new File("src/serializacion/ControlMessage.xsd"))); // Load your XSD file
+	        Validator validator = schema.newValidator();
+	        validator.validate(new StreamSource(new StringReader(xml)));
+		}catch (Exception e) {
+			return false;
+		}
+		// El documento es válido
+		return true;
 	}
 }

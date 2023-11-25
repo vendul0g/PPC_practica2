@@ -16,6 +16,7 @@ public class SetModeMessage extends ControlMessage{
 	
 	public SetModeMessage(ControlMessageType t, int idServer, int m) {
 		super(t, idServer);
+		setMode(m);
 	}
 	
 	public SetModeMessage(ControlMessageType t, int idServer, String m) {
@@ -26,6 +27,11 @@ public class SetModeMessage extends ControlMessage{
 	//Getters & Setters
 	public int getMode() {
 		return mode;
+	}
+	
+	public void setMode(int m) {
+		if(m == Message.MODE_JSON || m == Message.MODE_XML || m == Message.MODE_FARENHEIT || m == Message.MODE_CELSIUS)
+			this.mode = m;
 	}
 	
 	//Funcionalidad

@@ -7,6 +7,10 @@ import messages.*;
 import java.io.*;
 
 public class ControlThreadClient extends Thread{
+	//Constantes
+	private static final int MAX_ATTEMPTS = 5;
+	private static final int TIMEOUT = 5;
+	
 	//Atributos
 	private DatagramSocket socket;
 	private Cliente creator;
@@ -19,7 +23,7 @@ public class ControlThreadClient extends Thread{
 		scanner = new Scanner(System.in);
 		this.socket = createSocket();
 		
-		this.serializationMode = Message.MODE_XML; //Por defecto en JSON
+		this.serializationMode = Message.MODE_XML; //Por defecto en XML
 	}
 	
 	//Getters & Setters
@@ -37,8 +41,11 @@ public class ControlThreadClient extends Thread{
 	public void run() {
 		String inst;
 		DatagramPacket packet;
+		byte[] buf;
 		
 		while(true) {
+			buf = null;
+			
 			//Preparamos la interfaz
 			printPrompt();
 			//Leemos la entrada del usuario
@@ -47,7 +54,7 @@ public class ControlThreadClient extends Thread{
 			//Procesamos lo que quiere el usuario
 			ControlMessage c = ControlMessageType.getType(inst);
 			
-			//Comprobamos si el comando introducido es inválido
+			//Comprobamos si el comando es inválido
 			if(c.getCommand() == ControlMessageType.INVALID) {
 				System.out.println("Comando incorrecto");
 				printHelp();
@@ -78,38 +85,47 @@ public class ControlThreadClient extends Thread{
 				continue;
 			}
 			
+			//Si se quiere ver la estadística
+			if(c.getCommand() == ControlMessageType.GET_STATISTICS) {
+				System.out.println(this.creator.getStatistic());
+				continue;
+			}
+				
 			//Caso de mensajes con envío 
-			
 			//Se quiere cambiar el tiempo de refresco
-			if(c.getCommand() == ControlMessageType.SET_TIME_REFRESH && checkAddress(c)) {
-				byte[] buf = ((SetRefreshMessage)c).serialize(getSerializationMode());
-				packet = new DatagramPacket(buf, buf.length, creator.getAddress(c.getIdServer()), c.getIdServer());
-				sendMessage(packet);
+			if( c.getCommand() == ControlMessageType.SET_TIME_REFRESH &&
+				checkAddress(c)) {
+				buf = ((SetRefreshMessage)c).serialize(getSerializationMode());
 			}
 			
 			//Comprobamos si se quiere cambiar el modo de serialización de los mensajes broadcast
-			//o un cambio de temperatura
-			if( (c.getCommand() == ControlMessageType.BROADCAST_MODE 
-					|| c.getCommand() == ControlMessageType.CHANGE_UNIT)
+			else if( c.getCommand() == ControlMessageType.BROADCAST_MODE
 					&& checkAddress(c)) {
-				byte[] buf = ((SetModeMessage) c).serialize(getSerializationMode());		
-				packet = new DatagramPacket(buf, buf.length, creator.getAddress(c.getIdServer()), c.getIdServer());
-				sendMessage(packet);
+				buf = ((SetModeMessage) c).serialize(getSerializationMode());		
+			}
+			
+			//Comprobamos si se quiere cambiar la unidad de medida
+			else if( c.getCommand() == ControlMessageType.CHANGE_UNIT) {
+				buf = ((SetModeMessage) c).serialize(getSerializationMode());
 			}
 			
 			//Comprobamos si se quiere habilitar/deshabilitar el envio de datos de un servidor
-			if( (c.getCommand() == ControlMessageType.DISABLE 
+			else if( (c.getCommand() == ControlMessageType.DISABLE
 					|| c.getCommand() == ControlMessageType.ENABLE)
 					&& checkAddress(c)) {
-				byte[] buf = c.serialize(getSerializationMode());
-				packet = new DatagramPacket(buf, buf.length, creator.getAddress(c.getIdServer()), c.getIdServer());
-				sendMessage(packet);
+				buf = c.serialize(getSerializationMode());
 			}
 			
-			//Recibimos respuesta
-//			packet = new DatagramPacket(buf, buf.length);
-//			String resp = receiveMessage(packet);
-//			System.out.println(resp);
+			if(buf == null) {
+				System.out.println("Error: comando inválido");
+				printHelp();
+				continue;
+			}
+			
+			//Manadmos el paquete
+			packet = new DatagramPacket(buf, buf.length, creator.getAddress(c.getIdServer()), c.getIdServer());
+			sendMessage(packet);
+			
 		}
 		//Cerramos el socket
 //		closeSocket(socket);

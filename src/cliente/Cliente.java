@@ -9,6 +9,7 @@ import java.util.Set;
 import java.util.TreeMap;
 
 import estadistico.Estadistico;
+import messages.BroadcastMessage;
 import messages.Message;
 import servidores.Servidor;
 import threadsCliente.ControlThreadClient;
@@ -19,6 +20,7 @@ public class Cliente {
 	private DatagramSocket socketListener;
 	private Map<Integer, InetAddress> portServerMapper;
 	private boolean verbose;
+	private Estadistico e;
 	
 	//Constructor
 	public Cliente() {
@@ -26,6 +28,7 @@ public class Cliente {
 		crearSocketListener();
 		this.portServerMapper = new TreeMap<Integer, InetAddress>(); 
 		this.verbose = false;
+		this.e = new Estadistico();
 	}
 	
 	//Getters & Setters
@@ -58,6 +61,14 @@ public class Cliente {
 		return this.verbose;
 	}
 	
+	public String getStatistic() {
+		return this.e.getStatistic();
+	}
+	
+	public void addEntry(BroadcastMessage bm) {
+		this.e.addEntry(bm);
+	}
+	
 	//Funcionalidad
 	public void run() {
 		//Creamos los hilos
@@ -74,13 +85,16 @@ public class Cliente {
 	}
 	
 	public void crearSocketListener() {
-		try {
-			this.socketListener = new DatagramSocket(Servidor.BROADCAST_PORT);
-		} catch (SocketException e) {
-			e.printStackTrace();
-			System.err.println("Error creando el socket de escucha del cliente");
-		}
+	    try {
+	        this.socketListener = new DatagramSocket(null); 
+	        this.socketListener.setReuseAddress(true); // Habilitamos SO_REUSEADDR
+	        this.socketListener.bind(new InetSocketAddress(Servidor.BROADCAST_PORT)); // Bind the socket to the port
+	    } catch (SocketException e) {
+	        e.printStackTrace();
+	        System.err.println("Error creando el socket de escucha del cliente");
+	    }
 	}
+
 	
 	public void closeSockets() {
 		this.socketListener.close();

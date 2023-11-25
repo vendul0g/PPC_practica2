@@ -1,0 +1,149 @@
+
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ControlMessage>
+  <Command>DISABLE</Command>
+  <serverID>2001</serverID>
+</ControlMessage>
+
+---------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ControlMessage>
+  <Command>DISABLE</Command>
+  <serverID>2002</serverID>
+</ControlMessage>
+
+---------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ControlMessage>
+  <Command>SET_TIME_REFRESH</Command>
+  <serverID>2003</serverID>
+  <TimeRefresh>4</TimeRefresh>
+</ControlMessage>
+
+---------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ControlMessage>
+  <Command>DISABLE</Command>
+  <serverID>2003</serverID>
+</ControlMessage>
+
+---------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ControlMessage>
+  <Command>ENABLE</Command>
+  <serverID>2001</serverID>
+</ControlMessage>
+
+---------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ControlMessage>
+  <Command>ENABLE</Command>
+  <serverID>2002</serverID>
+</ControlMessage>
+
+---------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ControlMessage>
+  <Command>ENABLE</Command>
+  <serverID>2003</serverID>
+</ControlMessage>
+
+---------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ControlMessage>
+  <Command>DISABLE</Command>
+  <serverID>2002</serverID>
+</ControlMessage>
+
+---------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ControlMessage>
+  <Command>DISABLE</Command>
+  <serverID>2003</serverID>
+</ControlMessage>
+
+---------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ControlMessage>
+  <Command>DISABLE</Command>
+  <serverID>2001</serverID>
+</ControlMessage>
+
+---------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ControlMessage>
+  <Command>DISABLE</Command>
+  <serverID>2001</serverID>
+</ControlMessage>
+
+---------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ControlMessage>
+  <Command>CHANGE_UNIT</Command>
+  <serverID>2001</serverID>
+  <mode>3</mode>
+</ControlMessage>
+
+---------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ControlMessage>
+  <Command>CHANGE_UNIT</Command>
+  <serverID>2001</serverID>
+  <mode>3</mode>
+</ControlMessage>
+
+---------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ControlMessage>
+  <Command>DISABLE</Command>
+  <serverID>2001</serverID>
+</ControlMessage>
+
+---------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ControlMessage>
+  <Command>CHANGE_UNIT</Command>
+  <serverID>2001</serverID>
+  <mode>3</mode>
+</ControlMessage>
+
+---------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ControlMessage>
+  <Command>ENABLE</Command>
+  <serverID>2001</serverID>
+</ControlMessage>
+
+---------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ControlMessage>
+  <Command>SET_TIME_REFRESH</Command>
+  <serverID>2001</serverID>
+  <TimeRefresh>5</TimeRefresh>
+</ControlMessage>
+
+---------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ControlMessage>
+  <Command>CHANGE_UNIT</Command>
+  <serverID>2001</serverID>
+  <mode>3</mode>
+</ControlMessage>
+
+---------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ControlMessage>
+  <Command>CHANGE_UNIT</Command>
+  <serverID>2001</serverID>
+  <mode>3</mode>
+</ControlMessage>
+
+---------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ControlMessage>
+  <Command>CHANGE_UNIT</Command>
+  <serverID>2001</serverID>
+  <mode>3</mode>
+</ControlMessage>
+
+---------------------------------------------------------

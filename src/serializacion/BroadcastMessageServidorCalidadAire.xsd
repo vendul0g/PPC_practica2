@@ -5,9 +5,9 @@
    <xs:complexType name="BroadcastMessageType">
       <xs:sequence>
          <xs:element name="ID" type="xs:string"/>
-         <xs:element name="PresionAtmosferica" type="Param"/>
-         <xs:element name="Temperatura" type="Param"/>
-         <xs:element name="Humedad" type="Param"/>
+         <xs:element name="ConcentracionCO2" type="Param"/>
+         <xs:element name="ConcentracionO3" type="Param"/>
+         <xs:element name="ConcentracionParticulasSuspension" type="Param"/>
       </xs:sequence>
    </xs:complexType>
    

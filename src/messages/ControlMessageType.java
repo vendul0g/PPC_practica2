@@ -2,7 +2,7 @@ package messages;
 
 public enum ControlMessageType {
 	//Enumerado
-	SET_TIME_REFRESH, GET_STATISTICS, INVALID, ACK, HELP, VERBOSE, NOT_VERBOSE,
+	SET_TIME_REFRESH, GET_STATISTICS, INVALID, ACK, NACK, HELP, VERBOSE, NOT_VERBOSE,
 	CONTROL_MODE, BROADCAST_MODE, CHANGE_UNIT, DISABLE, ENABLE;
 
 	//Funcionalidad
@@ -36,6 +36,9 @@ public enum ControlMessageType {
 				
 			case "notverbose":
 				return new ControlMessage(NOT_VERBOSE);
+				
+			case "statistic":
+				return new ControlMessage(GET_STATISTICS);
 				
 			case "controlmode":
 				if(line.length != 2)
@@ -77,6 +80,37 @@ public enum ControlMessageType {
 				
 			default:
 				return new ControlMessage(INVALID);
+		}
+	}
+	
+	public static ControlMessageType getByName(String s) {
+		switch(s) {
+		case "SET_TIME_REFRESH":
+		    return SET_TIME_REFRESH;
+		case "GET_STATISTICS":
+		    return GET_STATISTICS;
+		case "ACK":
+		    return ACK;
+		case "NACK":
+			return NACK;
+		case "HELP":
+		    return HELP;
+		case "VERBOSE":
+		    return VERBOSE;
+		case "NOT_VERBOSE":
+		    return NOT_VERBOSE;
+		case "CONTROL_MODE":
+		    return CONTROL_MODE;
+		case "BROADCAST_MODE":
+		    return BROADCAST_MODE;
+		case "CHANGE_UNIT":
+		    return CHANGE_UNIT;
+		case "DISABLE":
+		    return DISABLE;
+		case "ENABLE":
+		    return ENABLE;
+		default:
+			return INVALID;
 		}
 	}
 }

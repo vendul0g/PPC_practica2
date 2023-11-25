@@ -61,18 +61,8 @@ public class XMLSetRefreshParser extends XMLControlMessageParser {
 	}
 	
 	public ControlMessage deserialize(String xml) {
-		//Validamos el documento XML
-		try {
-			SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-	        Schema schema = factory.newSchema(new StreamSource(new File("src/serializacion/SetRefreshMessage.xsd"))); // Load your XSD file
-	        Validator validator = schema.newValidator();
-	        validator.validate(new StreamSource(new StringReader(xml)));
-		}catch (Exception e) {
-			e.printStackTrace();
-			System.err.println("El documento XML no cumple el formato del XSD");
+		if(!validateDocument(xml))
 			return null;
-		}
-		// El documento es válido
 		
 		// Leemos el documento XML
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -103,5 +93,19 @@ public class XMLSetRefreshParser extends XMLControlMessageParser {
 		int idServer = Integer.valueOf(root.getElementsByTagName("serverID").item(0).getTextContent());
 		int time = Integer.valueOf(root.getElementsByTagName("TimeRefresh").item(0).getTextContent());
 		return new SetRefreshMessage(ControlMessageType.SET_TIME_REFRESH, idServer, time);
+	}
+	
+	private boolean validateDocument(String xml) {
+		//Validamos el documento XML
+		try {
+			SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+		    Schema schema = factory.newSchema(new StreamSource(new File("src/serializacion/SetRefreshMessage.xsd"))); 
+		    Validator validator = schema.newValidator();
+		    validator.validate(new StreamSource(new StringReader(xml)));
+		}catch (Exception e) {
+			return false;
+		}
+		// El documento es válido
+		return true;
 	}
 }
