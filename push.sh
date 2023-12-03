@@ -1,10 +1,13 @@
 #!/usr/bin/expect
 
-spawn git push -u origin main
-expect "Username for 'https://github.com':"
-send "$1\r"
+set u [lindex $argv 0]
+set t [lindex $argv 1]
 
-expect "Password for 'https://$1@github.com':"
-send "$2\r"
+#spawn git push -u origin main
+#expect "Username for 'https://github.com':"
+#send "$1\r"
 
-interact
+#expect "Password for 'https://$1@github.com':"
+#send "$2\r"
+
+#interact
