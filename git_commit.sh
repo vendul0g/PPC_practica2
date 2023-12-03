@@ -13,7 +13,8 @@ else
 fi
 
 #echo $1
-echo "usuario github:	vendul0g"
+u=vendul0g
+echo "usuario github:	$u"
 echo "Desafío:"
 
 #Inicializamos
@@ -43,9 +44,17 @@ XonCkeEYOuPWqH74vN+ZdQ=="
 
 #Desciframos
 token=$(echo -n "$tc" | openssl enc -d -aes-256-cbc -a -k "$p" -pbkdf2)
-echo $token
+#echo $token
 
 # realizamos el commit
 git add -A
 git commit -m "$1"
-git push -u origin main
+
+spawn git push -u origin main
+expect "Username for 'https://github.com':"
+send "$u\r"
+
+expect "Password for 'https://$u@github.com':"
+send "$token\r"
+
+interact
