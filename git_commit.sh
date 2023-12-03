@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/usr/bin/expect
 if test $# -eq 0
 then
   echo "commit.sh: Meteme el mensaje para el comit entre comillas dobles \"\" "
