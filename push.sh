@@ -5,9 +5,9 @@ set t [lindex $argv 1]
 
 spawn git push -u origin main
 expect "Username for 'https://github.com':"
-send "$1\r"
+send "$u\r"
 
-expect "Password for 'https://$1@github.com':"
-send "$2\r"
+expect "Password for 'https://$u@github.com':"
+send "$t\r"
 
 interact
