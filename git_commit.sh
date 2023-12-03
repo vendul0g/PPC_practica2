@@ -1,4 +1,4 @@
-#!/usr/bin/expect
+#!/bin/bash -e
 if test $# -eq 0
 then
   echo "commit.sh: Meteme el mensaje para el comit entre comillas dobles \"\" "
@@ -50,11 +50,5 @@ token=$(echo -n "$tc" | openssl enc -d -aes-256-cbc -a -k "$p" -pbkdf2)
 git add -A
 git commit -m "$1"
 
-spawn git push -u origin main
-expect "Username for 'https://github.com':"
-send "$u\r"
-
-expect "Password for 'https://$u@github.com':"
-send "$token\r"
-
-interact
+# Arrancamos expect
+./push.sh $u $token
